@@ -15,10 +15,15 @@ run/main_scene="res://Scenes/splash.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+AnimationIntro="*res://Prefabs/Transition/animation_intro.tscn"
+
 [display]
 
 window/size/viewport_width=800
 window/size/viewport_height=600
+window/size/resizable=false
 
 [rendering]
 
