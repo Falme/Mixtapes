@@ -8,17 +8,16 @@ var flag_colors_index = 0
 var flag_colors_size = 0
 var _flag_stripes: Array[Control] = []
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
+func start_transition(action:Callable):
 	_initialize_colors()
 	_initialize_flag_animation_instantiation()
 	_slide_in_flag_animation()
 	
 	await get_tree().create_timer(4).timeout
+	
+	action.call()
+	
 	_slide_out_flag_animation()
-
-func _process(delta: float) -> void:
-	pass
 
 func _initialize_colors():	
 	# Load JSON File
