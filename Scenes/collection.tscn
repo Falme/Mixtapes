@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://d3341xq470sbq"]
+[gd_scene load_steps=7 format=3 uid="uid://d3341xq470sbq"]
 
 [ext_resource type="Texture2D" uid="uid://bu7s4qqkrvdm4" path="res://Sprites/Collection-background-art.jpg" id="1_rkbxe"]
 [ext_resource type="Texture2D" uid="uid://jwdqa7kyo0jd" path="res://Sprites/collection.png" id="1_sxt1d"]
-[ext_resource type="Theme" uid="uid://cefy4gehumtu1" path="res://Themes/new_theme.tres" id="2_0abuc"]
 [ext_resource type="Script" path="res://Scripts/ExternalGame/call_external_game.gd" id="2_yc63g"]
 [ext_resource type="Texture2D" uid="uid://byrbp61s38rbh" path="res://Sprites/folder_back.png" id="3_807fx"]
 [ext_resource type="Texture2D" uid="uid://0dls73ig503s" path="res://Sprites/Cassette-SplashScreen-Icon.png" id="4_parow"]
@@ -69,7 +68,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("2_0abuc")
 uri = "https://ebeth.itch.io/small-games-manifesto"
 
 [node name="MixtapesManifesto" type="ColorRect" parent="BackgroundArt/ManifestosContainer"]
@@ -86,7 +84,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("2_0abuc")
 uri = "https://www.youtube.com/watch?v=I1yBJD4yRss"
 
 [node name="TapeArea" type="Control" parent="."]
@@ -168,5 +165,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_yc63g")
+executableName = "NoPlayersOnline.exe"
 
 [connection signal="pressed" from="TapeArea/ToGame" to="TapeArea/ToGame" method="_on_pressed"]

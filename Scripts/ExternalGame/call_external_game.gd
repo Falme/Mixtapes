@@ -1,5 +1,6 @@
 extends Button
 
+@export var executableName : String
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,6 +13,5 @@ func _process(delta: float) -> void:
 
 
 func _on_pressed() -> void:
-	print(OS.get_executable_path().get_base_dir())
-	OS.execute(OS.get_executable_path().get_base_dir()+"\\\\Games\\NoPlayersOnline.exe", [])
+	OS.execute(OS.get_executable_path().get_base_dir()+"\\\\Games\\"+executableName, [])
 	pass # Replace with function body.
