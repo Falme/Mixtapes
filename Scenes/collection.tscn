@@ -40,6 +40,7 @@ anchor_right = 1.0
 anchor_bottom = 0.333
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0.211765, 1, 1, 1)
 
 [node name="PunkManifestoLink" type="LinkButton" parent="BackgroundArt/ManifestosContainer/PunkManifesto"]
@@ -165,6 +166,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_yc63g")
-executableName = "NoPlayersOnline.exe"
+executableName = "Osiris.exe"
 
 [connection signal="pressed" from="TapeArea/ToGame" to="TapeArea/ToGame" method="_on_pressed"]
