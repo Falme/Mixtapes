@@ -28,7 +28,7 @@ func _initialize_colors():
 	flag_colors_index = rng.randi_range(0, flag_colors_data["flags"].size()-1)
 	
 	#Save Flag Stripes Length for optimized call
-	flag_colors_size = flag_colors_data["flags"][flag_colors_index].size()
+	flag_colors_size = flag_colors_data["flags"][flag_colors_index]["colors"].size()
 	
 	# initialize Flag Stripes array
 	_flag_stripes.resize(80)
@@ -50,9 +50,9 @@ func _slide_out_flag_animation():
 
 func add_flag_strip(index) -> void:
 	
-	var _r = (flag_colors_data["flags"][flag_colors_index][(index%flag_colors_size)]["r"])/255
-	var _g = (flag_colors_data["flags"][flag_colors_index][(index%flag_colors_size)]["g"])/255
-	var _b = (flag_colors_data["flags"][flag_colors_index][(index%flag_colors_size)]["b"])/255
+	var _r = (flag_colors_data["flags"][flag_colors_index]["colors"][(index%flag_colors_size)]["r"])/255
+	var _g = (flag_colors_data["flags"][flag_colors_index]["colors"][(index%flag_colors_size)]["g"])/255
+	var _b = (flag_colors_data["flags"][flag_colors_index]["colors"][(index%flag_colors_size)]["b"])/255
 	
 	var _instance = flag_animation_instance.duplicate()
 	_instance.local_position(Vector2(index*10,0))
