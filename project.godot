@@ -25,6 +25,10 @@ window/size/viewport_width=800
 window/size/viewport_height=600
 window/size/resizable=false
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://Localizations/localization.en.translation", "res://Localizations/localization.pt_BR.translation")
+
 [rendering]
 
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)
