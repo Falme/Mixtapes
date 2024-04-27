@@ -1,0 +1,17 @@
+var result = "";
+
+function ColorJSONParse(colorString)
+{
+	let colorsStrings = colorString.split(', ');
+	let formatted = '{"r":'+colorsStrings[0]+', "g":'+colorsStrings[1]+', "b":'+colorsStrings[2]+'},';
+	//console.log(formatted);
+	return formatted;
+}
+
+for(let index=0; index<document.querySelectorAll(".color-box").length; index++)
+{
+	let colorcode = document.querySelectorAll(".color-box:nth-child("+(index+1)+") tr:nth-child(2) .code")[0].innerHTML;
+	result += ColorJSONParse(colorcode)+"\n";
+}
+
+console.log(result);
