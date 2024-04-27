@@ -1,7 +1,7 @@
 extends Control
 
-func local_position(position):
-	$SlideFlagAnimation/FlagContainer.set_position(position)
+func local_position(_position):
+	$SlideFlagAnimation/FlagContainer.set_position(_position)
 	
 func local_play(anim):
 	$SlideFlagAnimation.play(anim)

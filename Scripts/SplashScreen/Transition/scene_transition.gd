@@ -1,6 +1,6 @@
 extends Control
 
-@onready var transition: Control = $AnimationIntro
+#@onready var transition: Control = $AnimationIntro
 
 func _ready() -> void:
 	changeScene()
