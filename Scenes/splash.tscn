@@ -193,7 +193,7 @@ bbcode_enabled = true
 text = "[outline_color=cyan][outline_size=2][font_size=26][center][b]Eat The Rich"
 fit_content = true
 script = ExtResource("3_y064v")
-possibleCaptions = Array[String](["caption_1", "caption_2", "caption_3", "caption_4", "caption_5"])
+possibleCaptions = Array[String](["caption_1", "caption_2", "caption_3", "caption_4", "caption_5", "caption_6", "caption_7", "caption_8"])
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SplashScreen"]
 libraries = {

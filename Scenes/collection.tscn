@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://d3341xq470sbq"]
+[gd_scene load_steps=8 format=3 uid="uid://d3341xq470sbq"]
 
 [ext_resource type="Texture2D" uid="uid://bu7s4qqkrvdm4" path="res://Sprites/Collection-background-art.jpg" id="1_rkbxe"]
 [ext_resource type="Texture2D" uid="uid://jwdqa7kyo0jd" path="res://Sprites/collection.png" id="1_sxt1d"]
+[ext_resource type="Texture2D" uid="uid://d1gos0t7pwxp7" path="res://Sprites/Button.png" id="2_x68r5"]
 [ext_resource type="Script" path="res://Scripts/ExternalGame/call_external_game.gd" id="2_yc63g"]
 [ext_resource type="Texture2D" uid="uid://byrbp61s38rbh" path="res://Sprites/folder_back.png" id="3_807fx"]
 [ext_resource type="Texture2D" uid="uid://0dls73ig503s" path="res://Sprites/Cassette-SplashScreen-Icon.png" id="4_parow"]
@@ -34,6 +35,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="PunkManifesto" type="ColorRect" parent="BackgroundArt/ManifestosContainer"]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -44,6 +46,30 @@ mouse_filter = 2
 color = Color(0.211765, 1, 1, 1)
 
 [node name="PunkManifestoLink" type="LinkButton" parent="BackgroundArt/ManifestosContainer/PunkManifesto"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+uri = "https://elgabe.itch.io/the-punk-game-manifesto"
+
+[node name="PunkManifesto2" type="NinePatchRect" parent="BackgroundArt/ManifestosContainer"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -4.0
+anchor_right = 1.0
+anchor_bottom = 0.333
+offset_left = -0.039978
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_x68r5")
+patch_margin_left = 64
+patch_margin_top = 64
+patch_margin_right = 64
+patch_margin_bottom = 64
+
+[node name="PunkManifestoLink" type="LinkButton" parent="BackgroundArt/ManifestosContainer/PunkManifesto2"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
