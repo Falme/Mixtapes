@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://d3341xq470sbq"]
+[gd_scene load_steps=9 format=3 uid="uid://d3341xq470sbq"]
 
 [ext_resource type="Texture2D" uid="uid://bu7s4qqkrvdm4" path="res://Sprites/Collection-background-art.jpg" id="1_rkbxe"]
 [ext_resource type="Texture2D" uid="uid://jwdqa7kyo0jd" path="res://Sprites/collection.png" id="1_sxt1d"]
 [ext_resource type="Texture2D" uid="uid://d1gos0t7pwxp7" path="res://Sprites/Button.png" id="2_x68r5"]
 [ext_resource type="Script" path="res://Scripts/ExternalGame/call_external_game.gd" id="2_yc63g"]
 [ext_resource type="Texture2D" uid="uid://byrbp61s38rbh" path="res://Sprites/folder_back.png" id="3_807fx"]
+[ext_resource type="Texture2D" uid="uid://872ldpcnwk0g" path="res://Sprites/Button-Arrow.svg" id="3_pkycy"]
 [ext_resource type="Texture2D" uid="uid://0dls73ig503s" path="res://Sprites/Cassette-SplashScreen-Icon.png" id="4_parow"]
 [ext_resource type="Texture2D" uid="uid://bw3nlsanott0x" path="res://Sprites/folder_front.png" id="5_7yb3l"]
 
@@ -34,26 +35,6 @@ anchor_bottom = 0.9
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PunkManifesto" type="ColorRect" parent="BackgroundArt/ManifestosContainer"]
-visible = false
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 0.333
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(0.211765, 1, 1, 1)
-
-[node name="PunkManifestoLink" type="LinkButton" parent="BackgroundArt/ManifestosContainer/PunkManifesto"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-uri = "https://elgabe.itch.io/the-punk-game-manifesto"
-
 [node name="PunkManifesto2" type="NinePatchRect" parent="BackgroundArt/ManifestosContainer"]
 layout_mode = 1
 anchors_preset = -1
@@ -69,6 +50,23 @@ patch_margin_top = 64
 patch_margin_right = 64
 patch_margin_bottom = 64
 
+[node name="ArrowButton" type="Control" parent="BackgroundArt/ManifestosContainer/PunkManifesto2"]
+layout_mode = 1
+anchor_left = 0.8
+anchor_right = 1.0
+anchor_bottom = 0.9
+
+[node name="Arrow" type="TextureRect" parent="BackgroundArt/ManifestosContainer/PunkManifesto2/ArrowButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_pkycy")
+expand_mode = 5
+stretch_mode = 5
+
 [node name="PunkManifestoLink" type="LinkButton" parent="BackgroundArt/ManifestosContainer/PunkManifesto2"]
 layout_mode = 1
 anchors_preset = 15
@@ -78,17 +76,23 @@ grow_horizontal = 2
 grow_vertical = 2
 uri = "https://elgabe.itch.io/the-punk-game-manifesto"
 
-[node name="SmallManifesto" type="ColorRect" parent="BackgroundArt/ManifestosContainer"]
+[node name="SmallManifesto3" type="NinePatchRect" parent="BackgroundArt/ManifestosContainer"]
 layout_mode = 1
 anchors_preset = -1
+anchor_left = -4.0
 anchor_top = 0.333
 anchor_right = 1.0
 anchor_bottom = 0.666
+offset_left = -0.039978
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(1, 0.486275, 0.443137, 1)
+texture = ExtResource("2_x68r5")
+patch_margin_left = 64
+patch_margin_top = 64
+patch_margin_right = 64
+patch_margin_bottom = 64
 
-[node name="SmallManifestoLink" type="LinkButton" parent="BackgroundArt/ManifestosContainer/SmallManifesto"]
+[node name="PunkManifestoLink" type="LinkButton" parent="BackgroundArt/ManifestosContainer/SmallManifesto3"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -97,14 +101,23 @@ grow_horizontal = 2
 grow_vertical = 2
 uri = "https://ebeth.itch.io/small-games-manifesto"
 
-[node name="MixtapesManifesto" type="ColorRect" parent="BackgroundArt/ManifestosContainer"]
+[node name="MixtapesManifesto4" type="NinePatchRect" parent="BackgroundArt/ManifestosContainer"]
 layout_mode = 1
 anchors_preset = -1
+anchor_left = -4.0
 anchor_top = 0.666
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -0.039978
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_x68r5")
+patch_margin_left = 64
+patch_margin_top = 64
+patch_margin_right = 64
+patch_margin_bottom = 64
 
-[node name="MixtapesManifestoLink" type="LinkButton" parent="BackgroundArt/ManifestosContainer/MixtapesManifesto"]
+[node name="PunkManifestoLink" type="LinkButton" parent="BackgroundArt/ManifestosContainer/MixtapesManifesto4"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
