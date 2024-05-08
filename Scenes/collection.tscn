@@ -1,13 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://d3341xq470sbq"]
+[gd_scene load_steps=8 format=3 uid="uid://d3341xq470sbq"]
 
 [ext_resource type="Texture2D" uid="uid://bu7s4qqkrvdm4" path="res://Sprites/Collection-background-art.jpg" id="1_rkbxe"]
 [ext_resource type="Texture2D" uid="uid://jwdqa7kyo0jd" path="res://Sprites/collection.png" id="1_sxt1d"]
-[ext_resource type="Texture2D" uid="uid://d1gos0t7pwxp7" path="res://Sprites/Button.png" id="2_x68r5"]
 [ext_resource type="Script" path="res://Scripts/ExternalGame/call_external_game.gd" id="2_yc63g"]
 [ext_resource type="Texture2D" uid="uid://byrbp61s38rbh" path="res://Sprites/folder_back.png" id="3_807fx"]
-[ext_resource type="Texture2D" uid="uid://872ldpcnwk0g" path="res://Sprites/Button-Arrow.svg" id="3_pkycy"]
 [ext_resource type="Texture2D" uid="uid://0dls73ig503s" path="res://Sprites/Cassette-SplashScreen-Icon.png" id="4_parow"]
 [ext_resource type="Texture2D" uid="uid://bw3nlsanott0x" path="res://Sprites/folder_front.png" id="5_7yb3l"]
+[ext_resource type="PackedScene" uid="uid://2d6byacn3gun" path="res://Prefabs/Manifestos/item_manifesto.tscn" id="7_1u07s"]
 
 [node name="Root" type="Control"]
 layout_mode = 3
@@ -27,113 +26,14 @@ grow_vertical = 2
 texture = ExtResource("1_sxt1d")
 expand_mode = 3
 
-[node name="ManifestosContainer" type="Control" parent="BackgroundArt"]
-layout_mode = 1
-anchor_top = 0.1
-anchor_right = 0.1
-anchor_bottom = 0.9
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="PunkManifesto2" type="NinePatchRect" parent="BackgroundArt/ManifestosContainer"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -4.0
-anchor_right = 1.0
-anchor_bottom = 0.333
-offset_left = -0.039978
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_x68r5")
-patch_margin_left = 64
-patch_margin_top = 64
-patch_margin_right = 64
-patch_margin_bottom = 64
-
-[node name="ArrowButton" type="Control" parent="BackgroundArt/ManifestosContainer/PunkManifesto2"]
-layout_mode = 1
-anchor_left = 0.8
-anchor_right = 1.0
-anchor_bottom = 0.9
-
-[node name="Arrow" type="TextureRect" parent="BackgroundArt/ManifestosContainer/PunkManifesto2/ArrowButton"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("3_pkycy")
-expand_mode = 5
-stretch_mode = 5
-
-[node name="PunkManifestoLink" type="LinkButton" parent="BackgroundArt/ManifestosContainer/PunkManifesto2"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-uri = "https://elgabe.itch.io/the-punk-game-manifesto"
-
-[node name="SmallManifesto3" type="NinePatchRect" parent="BackgroundArt/ManifestosContainer"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -4.0
-anchor_top = 0.333
-anchor_right = 1.0
-anchor_bottom = 0.666
-offset_left = -0.039978
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_x68r5")
-patch_margin_left = 64
-patch_margin_top = 64
-patch_margin_right = 64
-patch_margin_bottom = 64
-
-[node name="PunkManifestoLink" type="LinkButton" parent="BackgroundArt/ManifestosContainer/SmallManifesto3"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-uri = "https://ebeth.itch.io/small-games-manifesto"
-
-[node name="MixtapesManifesto4" type="NinePatchRect" parent="BackgroundArt/ManifestosContainer"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -4.0
-anchor_top = 0.666
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -0.039978
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_x68r5")
-patch_margin_left = 64
-patch_margin_top = 64
-patch_margin_right = 64
-patch_margin_bottom = 64
-
-[node name="PunkManifestoLink" type="LinkButton" parent="BackgroundArt/ManifestosContainer/MixtapesManifesto4"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-uri = "https://www.youtube.com/watch?v=I1yBJD4yRss"
-
-[node name="TapeArea" type="Control" parent="."]
+[node name="TapeArea" type="Control" parent="BackgroundArt"]
 layout_mode = 1
 anchor_left = 0.124
 anchor_top = 0.057
 anchor_right = 0.386
 anchor_bottom = 0.318
 
-[node name="TextureRect" type="TextureRect" parent="TapeArea"]
+[node name="TextureRect" type="TextureRect" parent="BackgroundArt/TapeArea"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -144,7 +44,7 @@ texture = ExtResource("3_807fx")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="TextureRect4" type="TextureRect" parent="TapeArea"]
+[node name="TextureRect4" type="TextureRect" parent="BackgroundArt/TapeArea"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -159,7 +59,7 @@ texture = ExtResource("1_rkbxe")
 expand_mode = 5
 stretch_mode = 5
 
-[node name="TextureRect2" type="TextureRect" parent="TapeArea/TextureRect4"]
+[node name="TextureRect2" type="TextureRect" parent="BackgroundArt/TapeArea/TextureRect4"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -174,7 +74,7 @@ texture = ExtResource("4_parow")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="TextureRect3" type="TextureRect" parent="TapeArea"]
+[node name="TextureRect3" type="TextureRect" parent="BackgroundArt/TapeArea"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -185,7 +85,7 @@ texture = ExtResource("5_7yb3l")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="TitleGame" type="RichTextLabel" parent="TapeArea/TextureRect3"]
+[node name="TitleGame" type="RichTextLabel" parent="BackgroundArt/TapeArea/TextureRect3"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.045
@@ -197,7 +97,7 @@ grow_vertical = 2
 bbcode_enabled = true
 text = "OSIRIS"
 
-[node name="ToGame" type="Button" parent="TapeArea"]
+[node name="ToGame" type="Button" parent="BackgroundArt/TapeArea"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -207,4 +107,53 @@ grow_vertical = 2
 script = ExtResource("2_yc63g")
 executableName = "Osiris.exe"
 
-[connection signal="pressed" from="TapeArea/ToGame" to="TapeArea/ToGame" method="_on_pressed"]
+[node name="ManifestosContainer" type="Control" parent="BackgroundArt"]
+layout_mode = 1
+anchor_top = 0.1
+anchor_right = 0.1
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemManifesto" parent="BackgroundArt/ManifestosContainer" instance=ExtResource("7_1u07s")]
+layout_mode = 1
+
+[node name="ItemManifesto2" parent="BackgroundArt/ManifestosContainer" instance=ExtResource("7_1u07s")]
+layout_mode = 1
+anchor_top = 0.333
+anchor_bottom = 0.666
+
+[node name="RichTextLabel" parent="BackgroundArt/ManifestosContainer/ItemManifesto2" index="0"]
+text = "[wave amp=20.0 freq=5.0 connected=1][center]
+
+[b]Small Games Manifesto[/b] 
+👥 [i]Ebeth[/i]
+[/center][/wave]
+"
+
+[node name="Link" parent="BackgroundArt/ManifestosContainer/ItemManifesto2" index="1"]
+uri = "https://ebeth.itch.io/small-games-manifesto"
+
+[node name="ItemManifesto3" parent="BackgroundArt/ManifestosContainer" instance=ExtResource("7_1u07s")]
+layout_mode = 1
+anchor_top = 0.666
+anchor_bottom = 1.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="RichTextLabel" parent="BackgroundArt/ManifestosContainer/ItemManifesto3" index="0"]
+text = "[wave amp=20.0 freq=5.0 connected=1][center]
+
+[b]Level Flow for a Video Game Mixtape[/b] 
+👥 [i]Alejandro Quan-Madrid[/i]
+[/center][/wave]
+"
+
+[node name="Link" parent="BackgroundArt/ManifestosContainer/ItemManifesto3" index="1"]
+uri = "https://www.youtube.com/watch?v=I1yBJD4yRss"
+
+[connection signal="pressed" from="BackgroundArt/TapeArea/ToGame" to="BackgroundArt/TapeArea/ToGame" method="_on_pressed"]
+
+[editable path="BackgroundArt/ManifestosContainer/ItemManifesto"]
+[editable path="BackgroundArt/ManifestosContainer/ItemManifesto2"]
+[editable path="BackgroundArt/ManifestosContainer/ItemManifesto3"]
