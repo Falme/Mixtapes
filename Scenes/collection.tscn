@@ -107,6 +107,20 @@ grow_vertical = 2
 script = ExtResource("2_yc63g")
 executableName = "Osiris.exe"
 
+[node name="ToGame2" type="Button" parent="BackgroundArt/TapeArea"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 233.8
+offset_top = 0.799999
+offset_right = 233.8
+offset_bottom = 0.800003
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_yc63g")
+executableName = "winmine.exe"
+
 [node name="ManifestosContainer" type="Control" parent="BackgroundArt"]
 layout_mode = 1
 anchor_top = 0.1
@@ -153,6 +167,7 @@ text = "[wave amp=20.0 freq=5.0 connected=1][center]
 uri = "https://www.youtube.com/watch?v=I1yBJD4yRss"
 
 [connection signal="pressed" from="BackgroundArt/TapeArea/ToGame" to="BackgroundArt/TapeArea/ToGame" method="_on_pressed"]
+[connection signal="pressed" from="BackgroundArt/TapeArea/ToGame2" to="BackgroundArt/TapeArea/ToGame2" method="_on_pressed"]
 
 [editable path="BackgroundArt/ManifestosContainer/ItemManifesto"]
 [editable path="BackgroundArt/ManifestosContainer/ItemManifesto2"]
