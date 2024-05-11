@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://d3341xq470sbq"]
+[gd_scene load_steps=7 format=3 uid="uid://d3341xq470sbq"]
 
 [ext_resource type="Texture2D" uid="uid://bu7s4qqkrvdm4" path="res://Sprites/Collection-background-art.jpg" id="1_rkbxe"]
-[ext_resource type="Texture2D" uid="uid://jwdqa7kyo0jd" path="res://Sprites/collection.png" id="1_sxt1d"]
 [ext_resource type="Script" path="res://Scripts/ExternalGame/call_external_game.gd" id="2_yc63g"]
-[ext_resource type="Texture2D" uid="uid://byrbp61s38rbh" path="res://Sprites/folder_back.png" id="3_807fx"]
-[ext_resource type="Texture2D" uid="uid://0dls73ig503s" path="res://Sprites/Cassette-SplashScreen-Icon.png" id="4_parow"]
+[ext_resource type="Texture2D" uid="uid://vppojqhi5lv3" path="res://Sprites/K7-Icon.svg" id="4_6sq48"]
 [ext_resource type="Texture2D" uid="uid://bw3nlsanott0x" path="res://Sprites/folder_front.png" id="5_7yb3l"]
+[ext_resource type="Texture2D" uid="uid://n5qjw27sqjvo" path="res://Sprites/minesweeper.png" id="5_u60ei"]
 [ext_resource type="PackedScene" uid="uid://2d6byacn3gun" path="res://Prefabs/Manifestos/item_manifesto.tscn" id="7_1u07s"]
 
 [node name="Root" type="Control"]
@@ -16,15 +15,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="BackgroundArt" type="TextureRect" parent="."]
+[node name="BackgroundArt" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_sxt1d")
-expand_mode = 3
+color = Color(0.862745, 0.411765, 0.882353, 1)
 
 [node name="TapeArea" type="Control" parent="BackgroundArt"]
 layout_mode = 1
@@ -33,18 +31,7 @@ anchor_top = 0.057
 anchor_right = 0.386
 anchor_bottom = 0.318
 
-[node name="TextureRect" type="TextureRect" parent="BackgroundArt/TapeArea"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("3_807fx")
-expand_mode = 3
-stretch_mode = 5
-
-[node name="TextureRect4" type="TextureRect" parent="BackgroundArt/TapeArea"]
+[node name="Osiris" type="TextureRect" parent="BackgroundArt/TapeArea"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -59,7 +46,7 @@ texture = ExtResource("1_rkbxe")
 expand_mode = 5
 stretch_mode = 5
 
-[node name="TextureRect2" type="TextureRect" parent="BackgroundArt/TapeArea/TextureRect4"]
+[node name="TapeIcon" type="TextureRect" parent="BackgroundArt/TapeArea/Osiris"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -70,22 +57,26 @@ offset_right = 20.372
 offset_bottom = -7.38998
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("4_parow")
+texture = ExtResource("4_6sq48")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="TextureRect3" type="TextureRect" parent="BackgroundArt/TapeArea"]
+[node name="TapeLabel" type="TextureRect" parent="BackgroundArt/TapeArea/Osiris"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -3.8
+offset_top = 5.2
+offset_right = 8.93796
+offset_bottom = 5.2
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("5_7yb3l")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="TitleGame" type="RichTextLabel" parent="BackgroundArt/TapeArea/TextureRect3"]
+[node name="TitleGame" type="RichTextLabel" parent="BackgroundArt/TapeArea/Osiris/TapeLabel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.045
@@ -97,27 +88,92 @@ grow_vertical = 2
 bbcode_enabled = true
 text = "OSIRIS"
 
-[node name="ToGame" type="Button" parent="BackgroundArt/TapeArea"]
+[node name="ToGame" type="Button" parent="BackgroundArt/TapeArea/Osiris"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -3.8
+offset_top = 5.2
+offset_right = -3.8
+offset_bottom = 5.2
 grow_horizontal = 2
 grow_vertical = 2
+mouse_default_cursor_shape = 2
+flat = true
 script = ExtResource("2_yc63g")
 executableName = "Osiris.exe"
 
-[node name="ToGame2" type="Button" parent="BackgroundArt/TapeArea"]
+[node name="Minesweeper" type="TextureRect" parent="BackgroundArt/TapeArea"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 233.8
-offset_top = 0.799999
+offset_top = -5.2
 offset_right = 233.8
-offset_bottom = 0.800003
+offset_bottom = 4.95351
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("5_u60ei")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="TapeIcon" type="TextureRect" parent="BackgroundArt/TapeArea/Minesweeper"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -20.692
+offset_top = 18.365
+offset_right = 20.372
+offset_bottom = -7.38998
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_6sq48")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="TapeLabel" type="TextureRect" parent="BackgroundArt/TapeArea/Minesweeper"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.8
+offset_top = 5.2
+offset_right = 8.93796
+offset_bottom = 5.2
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_7yb3l")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="TitleGame" type="RichTextLabel" parent="BackgroundArt/TapeArea/Minesweeper/TapeLabel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.045
+anchor_top = 0.739
+anchor_right = 0.966
+anchor_bottom = 0.943
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "Minesweeper"
+
+[node name="ToGame" type="Button" parent="BackgroundArt/TapeArea/Minesweeper"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.8
+offset_top = 5.2
+offset_right = -3.8
+offset_bottom = 5.2
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+flat = true
 script = ExtResource("2_yc63g")
 executableName = "winmine.exe"
 
@@ -166,8 +222,8 @@ text = "[wave amp=20.0 freq=5.0 connected=1][center]
 [node name="Link" parent="BackgroundArt/ManifestosContainer/ItemManifesto3" index="1"]
 uri = "https://www.youtube.com/watch?v=I1yBJD4yRss"
 
-[connection signal="pressed" from="BackgroundArt/TapeArea/ToGame" to="BackgroundArt/TapeArea/ToGame" method="_on_pressed"]
-[connection signal="pressed" from="BackgroundArt/TapeArea/ToGame2" to="BackgroundArt/TapeArea/ToGame2" method="_on_pressed"]
+[connection signal="pressed" from="BackgroundArt/TapeArea/Osiris/ToGame" to="BackgroundArt/TapeArea/Osiris/ToGame" method="_on_pressed"]
+[connection signal="pressed" from="BackgroundArt/TapeArea/Minesweeper/ToGame" to="BackgroundArt/TapeArea/Minesweeper/ToGame" method="_on_pressed"]
 
 [editable path="BackgroundArt/ManifestosContainer/ItemManifesto"]
 [editable path="BackgroundArt/ManifestosContainer/ItemManifesto2"]

@@ -171,6 +171,7 @@ anchors_preset = -1
 anchor_left = 0.8
 anchor_right = 1.0
 anchor_bottom = 0.9
+mouse_default_cursor_shape = 2
 theme_override_styles/focus = SubResource("StyleBoxEmpty_t8o2t")
 flat = true
 
