@@ -1,0 +1,79 @@
+[gd_scene load_steps=5 format=3 uid="uid://cjj6ie343hjoh"]
+
+[ext_resource type="Script" path="res://Scripts/Collection/tape_configuration.gd" id="1_76dmi"]
+[ext_resource type="Texture2D" uid="uid://vppojqhi5lv3" path="res://Sprites/K7-Icon.svg" id="2_dj6mr"]
+[ext_resource type="Texture2D" uid="uid://bw3nlsanott0x" path="res://Sprites/folder_front.png" id="3_7xgss"]
+[ext_resource type="Script" path="res://Scripts/ExternalGame/call_external_game.gd" id="4_7nuq8"]
+
+[node name="TapeGame" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.8
+offset_top = -5.2
+offset_right = 3.80002
+offset_bottom = 4.95351
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 5
+stretch_mode = 5
+script = ExtResource("1_76dmi")
+gameNumber = "Game1"
+
+[node name="TapeIcon" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -20.692
+offset_top = 18.365
+offset_right = 20.372
+offset_bottom = -7.38998
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_dj6mr")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="TapeLabel" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.8
+offset_top = 5.2
+offset_right = 8.93796
+offset_bottom = 5.2
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_7xgss")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="TitleGame" type="RichTextLabel" parent="TapeLabel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.045
+anchor_top = 0.739
+anchor_right = 0.966
+anchor_bottom = 0.943
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+
+[node name="ToGame" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.8
+offset_top = 5.2
+offset_right = -3.8
+offset_bottom = 5.2
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+flat = true
+script = ExtResource("4_7nuq8")
+
+[connection signal="pressed" from="ToGame" to="ToGame" method="_on_pressed"]
