@@ -28,6 +28,7 @@ func _load_title(_titleName):
 	pass
 
 func _load_author(_authorName):
+	$TapeLabel/AuthorGame.text = "👥 "+_authorName
 	pass
 
 func _load_banner(_bannerName):
