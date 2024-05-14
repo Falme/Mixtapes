@@ -1,3 +1,6 @@
+// Example
+// https://www.flagcolorcodes.com/asexual
+
 var result = "";
 
 function ColorJSONParse(colorString)

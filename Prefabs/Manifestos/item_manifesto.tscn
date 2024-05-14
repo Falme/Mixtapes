@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://2d6byacn3gun"]
 
-[ext_resource type="Texture2D" uid="uid://d1gos0t7pwxp7" path="res://Sprites/Button.png" id="1_xo01b"]
+[ext_resource type="Texture2D" uid="uid://d2jx8end7xq5n" path="res://Sprites/Button.svg" id="1_y17p6"]
 [ext_resource type="Script" path="res://Scripts/Manifestos/slide_manifesto_button.gd" id="2_q0kwh"]
 [ext_resource type="Texture2D" uid="uid://872ldpcnwk0g" path="res://Sprites/Button-Arrow.svg" id="3_hg6t0"]
 
@@ -131,7 +131,7 @@ anchor_right = 1.0
 anchor_bottom = 0.333
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_xo01b")
+texture = ExtResource("1_y17p6")
 patch_margin_left = 64
 patch_margin_top = 64
 patch_margin_right = 64
