@@ -1,7 +1,21 @@
 extends Button
 
-@export var executableName : String
+var executableName : String
+var gameNumber : String
+
+var thread: Thread
+
+func _ready():
+	thread = Thread.new()
 
 func _on_pressed() -> void:
-	OS.shell_open(OS.get_executable_path().get_base_dir()+"/Games/"+executableName)
+	thread.start(_open_game.bind())
 	pass
+
+func _open_game() -> void:
+	var path = OS.get_executable_path().get_base_dir()+"/Games/"+gameNumber+"/"
+	OS.execute("CMD.exe", ["/C", "cd "+path+" && "+executableName], [])
+	pass
+	
+func _exit_tree():
+	thread.wait_to_finish()

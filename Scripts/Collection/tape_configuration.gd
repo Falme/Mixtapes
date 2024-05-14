@@ -37,6 +37,7 @@ func _load_banner(_bannerName):
 	# Load image to Tape Background
 	this.texture = ImageTexture.create_from_image(imageFile)
 
-func _load_executable(_executablePath):
-	$ToGame.executableName = gameNumber+"\\"+_executablePath
+func _load_executable(_executableName):
+	$ToGame.executableName = _executableName
+	$ToGame.gameNumber = gameNumber
 	pass
