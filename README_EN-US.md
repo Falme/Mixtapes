@@ -1,5 +1,5 @@
 
-[[README]] 👈
+[README PT-BR](https://github.com/Falme/Mixtapes/blob/main/README.md) 👈
 
 # MIXTAPES - Short Games Collection
 
