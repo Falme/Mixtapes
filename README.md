@@ -26,10 +26,6 @@ Desenvolver e publicar jogos não precisa ser tão difícil; Nós podemos criar 
 
 ## Como Começar?
 
-Antes de usar o repositório, verifique que você tem:
-
-- [Godot Engine](https://godotengine.org/download/archive/)
-
 Baixe a versão mais recente do Mixtapes na [Pagina de Releases](https://github.com/Falme/Mixtapes/releases/)
 
 - Descomprima o arquivo "Mixtapes.zip" com zip, 7zip ou semelhante
