@@ -5,6 +5,11 @@
 
 MIXTAPES is a project in [Godot 4.2](https://godotengine.org/download/archive/) that groups together 9 short games intended to be sold at a short price.
 
+## Currently Working on
+
+- [] Improving Visual Appearence
+
+
 ## Why?
 
 Indie game developers typically spend months or even years creating a single game for release to the public. However, it is evident that creating shorter games would be beneficial for both developers and players. 
