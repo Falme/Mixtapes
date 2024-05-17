@@ -7,7 +7,7 @@ MIXTAPES é um projeto feito em [Godot 4.2](https://godotengine.org/download/arc
 
 ## Atualmente trabalhando com:
 
-- [] Melhorias na aparência visual
+- [ ] Melhorias na aparência visual
 
 
 ## Motivo?

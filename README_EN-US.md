@@ -7,7 +7,7 @@ MIXTAPES is a project in [Godot 4.2](https://godotengine.org/download/archive/) 
 
 ## Currently Working on
 
-- [] Improving Visual Appearence
+- [ ] Improving Visual Appearence
 
 
 ## Why?
