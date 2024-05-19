@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="800"
+   height="600"
+   viewBox="0 0 800 600"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="mixtapes_windowframe.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="17.355781"
+     inkscape:cx="753.52414"
+     inkscape:cy="23.536826"
+     inkscape:window-width="2498"
+     inkscape:window-height="1057"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Shadow"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="rect1"
+       style="fill:#737373;stroke-width:1.79614;stroke-linecap:round;stroke-linejoin:round"
+       inkscape:label="ShadowBottom"
+       d="m 0,595 h 800 v 5 H 5.0127389 Z"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       id="rect2"
+       style="fill:#5a5a5a;stroke-width:1.5555;stroke-linecap:round;stroke-linejoin:round"
+       inkscape:label="ShadowRight"
+       d="m 795,0 5,5.0127389 V 600 l -5,-4.97051 z"
+       sodipodi:nodetypes="ccccc" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Frame">
+    <path
+       id="rect3"
+       style="fill:#fd8374;fill-opacity:1;stroke-width:1.99658;stroke-linecap:round;stroke-linejoin:round"
+       inkscape:label="background-color-frame"
+       d="M 0 0 L 0 595 L 795 595 L 795 0 L 0 0 z M 10 40 L 785 40 L 785 585 L 10 585 L 10 40 z " />
+    <g
+       inkscape:groupmode="layer"
+       id="layer3"
+       inkscape:label="Borders">
+      <rect
+         style="fill:none;fill-opacity:1;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke:#4d2973;stroke-opacity:1;stroke-dasharray:none"
+         id="rect4"
+         width="775"
+         height="545"
+         x="10"
+         y="40" />
+      <rect
+         style="fill:#ffccbb;fill-opacity:1;stroke:#4d2973;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect5"
+         width="775.32568"
+         height="25.325691"
+         x="9.8371563"
+         y="7.3371563" />
+      <g
+         inkscape:groupmode="layer"
+         id="layer5"
+         inkscape:label="CloseButton">
+        <rect
+           style="fill:#ffccbb;fill-opacity:1;stroke:#4d2973;stroke-width:2.76905;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="rect6"
+           width="17.230957"
+           height="17.230955"
+           x="761.38452"
+           y="11.384525"
+           inkscape:label="CloseButton" />
+        <g
+           inkscape:groupmode="layer"
+           id="layer4"
+           inkscape:label="X">
+          <path
+             style="fill:none;stroke:#4d2973;stroke-width:2.893;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none"
+             d="M 761.09202,28.904119 778.82715,11.168983"
+             id="path6" />
+          <path
+             style="fill:none;stroke:#4d2973;stroke-width:2.893;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none"
+             d="M 778.82715,28.904117 761.09202,11.168985"
+             id="path7" />
+        </g>
+      </g>
+      <rect
+         style="fill:#ffccbb;fill-opacity:1;stroke:#4d2973;stroke-width:2.76905;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect6-1"
+         width="17.230957"
+         height="17.230955"
+         x="731.38452"
+         y="11.384525"
+         inkscape:label="MaxScreen" />
+    </g>
+  </g>
+</svg>

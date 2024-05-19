@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://d3341xq470sbq"]
+[gd_scene load_steps=8 format=3 uid="uid://d3341xq470sbq"]
 
 [ext_resource type="PackedScene" uid="uid://cjj6ie343hjoh" path="res://Prefabs/Collection/tape_game.tscn" id="1_d8x02"]
 [ext_resource type="Texture2D" uid="uid://cstkygg43nho6" path="res://Sprites/mixtapes_background.svg" id="1_dcju0"]
 [ext_resource type="Shader" path="res://Shaders/background.gdshader" id="2_j8g3b"]
+[ext_resource type="Texture2D" uid="uid://enmxh4sidk6h" path="res://Sprites/mixtapes_windowframe.svg" id="5_200ii"]
+[ext_resource type="Script" path="res://Scripts/CloseWindow/close_window.gd" id="6_sxxwh"]
 [ext_resource type="PackedScene" uid="uid://2d6byacn3gun" path="res://Prefabs/Manifestos/item_manifesto.tscn" id="7_1u07s"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eq1st"]
@@ -169,6 +171,24 @@ text = "[wave amp=20.0 freq=5.0 connected=1][center]
 
 [node name="Link" parent="BackgroundArt/BackgroundFilter/ManifestosContainer/ItemManifesto3" index="1"]
 uri = "https://www.youtube.com/watch?v=I1yBJD4yRss"
+
+[node name="WindowFrame" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("5_200ii")
+
+[node name="CloseWindow" type="Button" parent="WindowFrame"]
+layout_mode = 0
+offset_left = 760.0
+offset_top = 11.0
+offset_right = 768.0
+offset_bottom = 19.0
+scale = Vector2(2.68, 2.32)
+script = ExtResource("6_sxxwh")
+
+[connection signal="pressed" from="WindowFrame/CloseWindow" to="WindowFrame/CloseWindow" method="_on_pressed"]
 
 [editable path="BackgroundArt/BackgroundFilter/ManifestosContainer/ItemManifesto"]
 [editable path="BackgroundArt/BackgroundFilter/ManifestosContainer/ItemManifesto2"]

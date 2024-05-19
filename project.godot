@@ -24,6 +24,7 @@ AnimationIntro="*res://Prefabs/Transition/animation_intro.tscn"
 window/size/viewport_width=800
 window/size/viewport_height=600
 window/size/resizable=false
+window/size/borderless=true
 
 [internationalization]
 
