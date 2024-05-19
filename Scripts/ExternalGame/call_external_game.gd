@@ -13,7 +13,7 @@ func _on_pressed() -> void:
 	pass
 
 func _open_game() -> void:
-	var path: String = OS.get_executable_path().get_base_dir().path_join("Games").path_join(gameNumber).path_join("mixtape_info.txt")
+	var path: String = OS.get_executable_path().get_base_dir().path_join("Games").path_join(gameNumber)
 
 	var command: String = ""
 	var args: Array[Variant] = []
@@ -23,7 +23,7 @@ func _open_game() -> void:
 		args = ["/C", "cd "+path+" && "+executableName]
 	else:
 		command = "sh"
-	args = ["-c", "cd "+path+" && ./"+executableName]
+		args = ["-c", "cd "+path+" && ./"+executableName]
 
 	OS.execute(command, args, [])
 

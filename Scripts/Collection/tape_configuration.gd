@@ -7,7 +7,7 @@ func _ready():
 	_load_info()
 
 func _load_info():
-	var filePath: String = OS.get_executable_path().get_base_dir().path_join("Games").path_join("gameNumber").path_join("mixtape_info.txt")
+	var filePath: String = OS.get_executable_path().get_base_dir().path_join("Games").path_join(gameNumber).path_join("mixtape_info.txt")
 	var file = FileAccess.open(filePath, FileAccess.READ)
 	var content = file.get_as_text()
 
@@ -32,7 +32,7 @@ func _load_author(_authorName):
 	pass
 
 func _load_banner(_bannerName):
-	var bannerPath: String = OS.get_executable_path().get_base_dir().path_join("Games").path_join("gameNumber").path_join(_bannerName)
+	var bannerPath: String = OS.get_executable_path().get_base_dir().path_join("Games").path_join(gameNumber).path_join(_bannerName)
 	var imageFile = Image.load_from_file(bannerPath)
 
 	# Load image to Tape Background
