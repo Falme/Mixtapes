@@ -23,15 +23,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="17.355781"
-     inkscape:cx="753.52414"
-     inkscape:cy="23.536826"
+     inkscape:zoom="1.0847363"
+     inkscape:cx="163.1733"
+     inkscape:cy="258.58819"
      inkscape:window-width="2498"
      inkscape:window-height="1057"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer3" />
   <defs
      id="defs1" />
   <g
@@ -78,6 +78,13 @@
          height="25.325691"
          x="9.8371563"
          y="7.3371563" />
+      <rect
+         style="fill:none;fill-opacity:1;stroke:#4d2973;stroke-width:2.92243;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect5-0"
+         width="792.07751"
+         height="592.07758"
+         x="1.4612143"
+         y="1.4612143" />
       <g
          inkscape:groupmode="layer"
          id="layer5"
