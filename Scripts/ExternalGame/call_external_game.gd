@@ -25,7 +25,7 @@ func _open_game() -> void:
 		command = "sh"
 	args = ["-c", "cd "+path+" && ./"+executableName]
 
-	OS.execute(command, args, false)
+	OS.execute(command, args, [])
 
 	pass
 
