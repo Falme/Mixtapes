@@ -13,7 +13,7 @@ func _on_pressed() -> void:
 	pass
 
 func _open_game() -> void:
-	var path = OS.get_executable_path().get_base_dir().plus_file("Games").plus_file(gameNumber).plus_file("mixtape_info.txt")
+	var path: String = OS.get_executable_path().get_base_dir().path_join("Games").path_join(gameNumber).path_join("mixtape_info.txt")
 
 	var command: String = ""
 	var args: Array[Variant] = []
