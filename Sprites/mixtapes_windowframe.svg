@@ -23,21 +23,37 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="1.0847363"
-     inkscape:cx="163.1733"
-     inkscape:cy="258.58819"
+     inkscape:zoom="12.27239"
+     inkscape:cx="-0.73335347"
+     inkscape:cy="621.27262"
      inkscape:window-width="2498"
      inkscape:window-height="1057"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer3" />
+     inkscape:current-layer="layer1" />
   <defs
      id="defs1" />
   <g
      inkscape:label="Shadow"
      inkscape:groupmode="layer"
      id="layer1">
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.1327;stroke-linecap:round"
+       id="rect7"
+       width="5"
+       height="5"
+       x="795"
+       y="2.0365061e-08"
+       inkscape:label="bleeded" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.1327;stroke-linecap:round"
+       id="rect8"
+       width="5"
+       height="5"
+       x="0"
+       y="595"
+       inkscape:label="bleeded" />
     <path
        id="rect1"
        style="fill:#737373;stroke-width:1.79614;stroke-linecap:round;stroke-linejoin:round"
