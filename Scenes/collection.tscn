@@ -173,7 +173,7 @@ grow_vertical = 1
 [node name="RichTextLabel" parent="WindowContainer/ManifestosContainer/ItemManifesto3" index="0"]
 text = "[wave amp=20.0 freq=5.0 connected=1][center]
 
-[b]Level Flow for a Video Game Mixtape[/b] 
+[b] Level Flow for a Video Game Mixtape[/b] 
 👥 [i]Alejandro Quan-Madrid[/i]
 [/center][/wave]
 "
