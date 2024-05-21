@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckd1g6t58vmd0"]
+
+[ext_resource type="Texture2D" uid="uid://enmxh4sidk6h" path="res://Sprites/mixtapes_windowframe.svg" id="1_uip3j"]
+[ext_resource type="Script" path="res://Scripts/CloseWindow/close_window.gd" id="2_ul5r4"]
+
+[node name="WindowFrame" type="CanvasLayer"]
+layer = 20
+
+[node name="WindowFrame" type="TextureRect" parent="."]
+offset_right = 800.0
+offset_bottom = 600.0
+mouse_filter = 2
+texture = ExtResource("1_uip3j")
+
+[node name="CloseWindow" type="Button" parent="WindowFrame"]
+layout_mode = 0
+offset_left = 760.0
+offset_top = 11.0
+offset_right = 768.0
+offset_bottom = 19.0
+scale = Vector2(2.68, 2.32)
+script = ExtResource("2_ul5r4")
+
+[connection signal="pressed" from="WindowFrame/CloseWindow" to="WindowFrame/CloseWindow" method="_on_pressed"]
