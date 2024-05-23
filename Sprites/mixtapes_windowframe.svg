@@ -23,15 +23,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="12.27239"
-     inkscape:cx="-0.73335347"
-     inkscape:cy="621.27262"
+     inkscape:zoom="1.5340488"
+     inkscape:cx="386.55876"
+     inkscape:cy="47.260557"
      inkscape:window-width="2498"
      inkscape:window-height="1057"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer3" />
   <defs
      id="defs1" />
   <g
@@ -81,21 +81,21 @@
        id="layer3"
        inkscape:label="Borders">
       <rect
-         style="fill:none;fill-opacity:1;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke:#4d2973;stroke-opacity:1;stroke-dasharray:none"
+         style="fill:none;fill-opacity:1;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke:#38505e;stroke-opacity:1;stroke-dasharray:none"
          id="rect4"
          width="775"
          height="545"
          x="10"
          y="40" />
       <rect
-         style="fill:#ffccbb;fill-opacity:1;stroke:#4d2973;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:#ffccbb;fill-opacity:1;stroke:#38505e;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="rect5"
          width="775.32568"
          height="25.325691"
          x="9.8371563"
          y="7.3371563" />
       <rect
-         style="fill:none;fill-opacity:1;stroke:#4d2973;stroke-width:2.92243;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:none;fill-opacity:1;stroke:#38505e;stroke-width:2.92243;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="rect5-0"
          width="792.07751"
          height="592.07758"
@@ -106,7 +106,7 @@
          id="layer5"
          inkscape:label="CloseButton">
         <rect
-           style="fill:#ffccbb;fill-opacity:1;stroke:#4d2973;stroke-width:2.76905;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           style="fill:#ffccbb;fill-opacity:1;stroke:#38505e;stroke-width:2.76905;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            id="rect6"
            width="17.230957"
            height="17.230955"
@@ -118,17 +118,17 @@
            id="layer4"
            inkscape:label="X">
           <path
-             style="fill:none;stroke:#4d2973;stroke-width:2.893;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none"
+             style="fill:none;stroke:#38505e;stroke-width:2.893;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none"
              d="M 761.09202,28.904119 778.82715,11.168983"
              id="path6" />
           <path
-             style="fill:none;stroke:#4d2973;stroke-width:2.893;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none"
+             style="fill:none;stroke:#38505e;stroke-width:2.893;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none"
              d="M 778.82715,28.904117 761.09202,11.168985"
              id="path7" />
         </g>
       </g>
       <rect
-         style="fill:#ffccbb;fill-opacity:1;stroke:#4d2973;stroke-width:2.76905;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:#ffccbb;fill-opacity:1;stroke:#38505e;stroke-width:2.76905;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="rect6-1"
          width="17.230957"
          height="17.230955"

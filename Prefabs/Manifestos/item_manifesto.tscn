@@ -16,7 +16,7 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-4, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(-4.35, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/1/type = "bezier"
@@ -27,7 +27,7 @@ tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(0.65, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/2/type = "value"
@@ -53,7 +53,7 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(-0.9, -0.25, 0, 0.25, 0, -4, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(-0.9, -0.25, 0, 0.25, 0, -4.35, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 1)
 }
 tracks/1/type = "bezier"
@@ -64,7 +64,7 @@ tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(4, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(4.1, -0.25, 0, 0.25, 0, 0.65, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 1)
 }
 tracks/2/type = "value"
@@ -90,7 +90,7 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(-4, -0.25, 0, 0.25, 0, -0.9, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(-4.35, -0.25, 0, 0.25, 0, -0.9, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 1)
 }
 tracks/1/type = "bezier"
@@ -101,7 +101,7 @@ tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 4, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(0.65, -0.25, 0, 0.25, 0, 4, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 1)
 }
 tracks/2/type = "value"
@@ -126,11 +126,12 @@ _data = {
 
 [node name="ItemManifesto" type="NinePatchRect"]
 anchors_preset = -1
-anchor_left = -4.0
-anchor_right = 1.0
+anchor_left = -4.35
+anchor_right = 0.65
 anchor_bottom = 0.333
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 0
 texture = ExtResource("1_y17p6")
 patch_margin_left = 64
 patch_margin_top = 64
@@ -142,7 +143,7 @@ script = ExtResource("2_q0kwh")
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.2
-anchor_right = 0.8
+anchor_right = 0.85
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -159,7 +160,7 @@ fit_content = true
 [node name="Link" type="LinkButton" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.8
+anchor_right = 0.85
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -168,7 +169,7 @@ uri = "https://elgabe.itch.io/the-punk-game-manifesto"
 [node name="ArrowButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.8
+anchor_left = 0.9
 anchor_right = 1.0
 anchor_bottom = 0.9
 mouse_default_cursor_shape = 2
