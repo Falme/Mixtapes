@@ -69,6 +69,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TapeArea" type="Control" parent="WindowContainer"]
+visible = false
 layout_mode = 1
 anchor_left = 0.124
 anchor_top = 0.057
@@ -76,64 +77,152 @@ anchor_right = 0.386
 anchor_bottom = 0.318
 
 [node name="TapeGame1" parent="WindowContainer/TapeArea" instance=ExtResource("1_d8x02")]
-layout_mode = 1
-offset_left = 1.8
-offset_right = 1.8
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 
 [node name="TapeGame2" parent="WindowContainer/TapeArea" instance=ExtResource("1_d8x02")]
-layout_mode = 1
-offset_left = 239.8
-offset_right = 239.8
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 63.0
+offset_right = 0.0
+offset_bottom = 63.0
 gameNumber = "Game2"
 
 [node name="TapeGame3" parent="WindowContainer/TapeArea" instance=ExtResource("1_d8x02")]
-layout_mode = 1
-offset_left = 471.8
-offset_right = 471.8
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 126.0
+offset_right = 0.0
+offset_bottom = 126.0
 gameNumber = "Game3"
 
 [node name="TapeGame4" parent="WindowContainer/TapeArea" instance=ExtResource("1_d8x02")]
-layout_mode = 1
-offset_top = 163.8
-offset_bottom = 173.954
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 189.0
+offset_right = 0.0
+offset_bottom = 189.0
 gameNumber = "Game4"
 
 [node name="TapeGame5" parent="WindowContainer/TapeArea" instance=ExtResource("1_d8x02")]
-layout_mode = 1
-offset_left = 239.8
-offset_top = 163.8
-offset_right = 239.8
-offset_bottom = 173.954
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 252.0
+offset_right = 0.0
+offset_bottom = 252.0
 gameNumber = "Game5"
 
 [node name="TapeGame6" parent="WindowContainer/TapeArea" instance=ExtResource("1_d8x02")]
-layout_mode = 1
-offset_left = 471.8
-offset_top = 163.8
-offset_right = 471.8
-offset_bottom = 173.954
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 315.0
+offset_right = 0.0
+offset_bottom = 315.0
 gameNumber = "Game6"
 
 [node name="TapeGame7" parent="WindowContainer/TapeArea" instance=ExtResource("1_d8x02")]
-layout_mode = 1
-offset_top = 332.8
-offset_bottom = 342.953
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 378.0
+offset_right = 0.0
+offset_bottom = 378.0
 gameNumber = "Game7"
 
 [node name="TapeGame8" parent="WindowContainer/TapeArea" instance=ExtResource("1_d8x02")]
-layout_mode = 1
-offset_left = 239.8
-offset_top = 332.8
-offset_right = 239.8
-offset_bottom = 342.953
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 441.0
+offset_right = 0.0
+offset_bottom = 441.0
 gameNumber = "Game8"
 
 [node name="TapeGame9" parent="WindowContainer/TapeArea" instance=ExtResource("1_d8x02")]
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 504.0
+offset_right = 0.0
+offset_bottom = 504.0
+gameNumber = "Game9"
+
+[node name="TapeArea2" type="Control" parent="WindowContainer"]
 layout_mode = 1
-offset_left = 471.8
-offset_top = 332.8
-offset_right = 471.8
-offset_bottom = 342.953
+anchor_left = 0.076
+anchor_top = 0.057
+anchor_right = 0.965
+anchor_bottom = 0.937
+
+[node name="GridContainer" type="GridContainer" parent="WindowContainer/TapeArea2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="TapeGame1" parent="WindowContainer/TapeArea2/GridContainer" instance=ExtResource("1_d8x02")]
+layout_mode = 2
+
+[node name="TapeGame2" parent="WindowContainer/TapeArea2/GridContainer" instance=ExtResource("1_d8x02")]
+layout_mode = 2
+gameNumber = "Game2"
+
+[node name="TapeGame3" parent="WindowContainer/TapeArea2/GridContainer" instance=ExtResource("1_d8x02")]
+layout_mode = 2
+gameNumber = "Game3"
+
+[node name="TapeGame4" parent="WindowContainer/TapeArea2/GridContainer" instance=ExtResource("1_d8x02")]
+layout_mode = 2
+gameNumber = "Game4"
+
+[node name="TapeGame5" parent="WindowContainer/TapeArea2/GridContainer" instance=ExtResource("1_d8x02")]
+layout_mode = 2
+gameNumber = "Game5"
+
+[node name="TapeGame6" parent="WindowContainer/TapeArea2/GridContainer" instance=ExtResource("1_d8x02")]
+layout_mode = 2
+gameNumber = "Game6"
+
+[node name="TapeGame7" parent="WindowContainer/TapeArea2/GridContainer" instance=ExtResource("1_d8x02")]
+layout_mode = 2
+gameNumber = "Game7"
+
+[node name="TapeGame8" parent="WindowContainer/TapeArea2/GridContainer" instance=ExtResource("1_d8x02")]
+layout_mode = 2
+gameNumber = "Game8"
+
+[node name="TapeGame9" parent="WindowContainer/TapeArea2/GridContainer" instance=ExtResource("1_d8x02")]
+layout_mode = 2
 gameNumber = "Game9"
 
 [node name="ManifestosContainer" type="Control" parent="WindowContainer"]

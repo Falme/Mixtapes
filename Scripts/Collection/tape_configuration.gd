@@ -1,6 +1,6 @@
-extends TextureRect
+extends Control
 
-var this : TextureRect = self
+var this : Control = self
 @export var gameNumber : String
 
 func _ready():
@@ -36,7 +36,7 @@ func _load_banner(_bannerName):
 	var imageFile = Image.load_from_file(bannerPath)
 	
 	# Load image to Tape Background
-	this.texture = ImageTexture.create_from_image(imageFile)
+	$Tape/GameBGImage.texture = ImageTexture.create_from_image(imageFile)
 
 func _load_executable(_executableName):
 	$ToGame.executableName = _executableName
