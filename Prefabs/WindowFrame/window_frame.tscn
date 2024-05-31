@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://ckd1g6t58vmd0"]
+[gd_scene load_steps=6 format=3 uid="uid://ckd1g6t58vmd0"]
 
 [ext_resource type="Texture2D" uid="uid://enmxh4sidk6h" path="res://Sprites/mixtapes_windowframe.svg" id="1_uip3j"]
+[ext_resource type="Script" path="res://Scripts/DragWindow/drag_window.gd" id="2_gxhl3"]
 [ext_resource type="Script" path="res://Scripts/CloseWindow/close_window.gd" id="2_ul5r4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qek4g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r8g7m"]
 
 [node name="WindowFrame" type="CanvasLayer"]
 layer = 20
@@ -12,6 +17,19 @@ offset_bottom = 600.0
 mouse_filter = 2
 texture = ExtResource("1_uip3j")
 
+[node name="DragWindow" type="Button" parent="WindowFrame"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.024
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.68, 2.32)
+mouse_default_cursor_shape = 6
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qek4g")
+flat = true
+script = ExtResource("2_gxhl3")
+
 [node name="CloseWindow" type="Button" parent="WindowFrame"]
 layout_mode = 0
 offset_left = 760.0
@@ -19,6 +37,12 @@ offset_top = 11.0
 offset_right = 768.0
 offset_bottom = 19.0
 scale = Vector2(2.68, 2.32)
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_r8g7m")
+flat = true
 script = ExtResource("2_ul5r4")
 
+[connection signal="button_down" from="WindowFrame/DragWindow" to="WindowFrame/DragWindow" method="_on_button_down"]
+[connection signal="button_up" from="WindowFrame/DragWindow" to="WindowFrame/DragWindow" method="_on_button_up"]
+[connection signal="pressed" from="WindowFrame/DragWindow" to="WindowFrame/DragWindow" method="_on_pressed"]
 [connection signal="pressed" from="WindowFrame/CloseWindow" to="WindowFrame/CloseWindow" method="_on_pressed"]

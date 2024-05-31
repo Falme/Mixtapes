@@ -4,9 +4,9 @@
 <svg
    version="1.1"
    id="svg2"
-   width="371.97607"
-   height="242.58507"
-   viewBox="0 0 371.97607 242.58506"
+   width="371.81955"
+   height="241.38701"
+   viewBox="0 0 371.81954 241.387"
    sodipodi:docname="K7-Icon.svg"
    inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -119,8 +119,8 @@
      inkscape:pagecheckerboard="0"
      showgrid="false"
      inkscape:zoom="1.4039063"
-     inkscape:cx="16.38286"
-     inkscape:cy="131.41903"
+     inkscape:cx="10.684474"
+     inkscape:cy="126.43294"
      inkscape:window-width="2498"
      inkscape:window-height="1057"
      inkscape:window-x="-8"
@@ -134,10 +134,10 @@
      id="layer9"
      inkscape:label="OutsideBorderFlash"
      style="display:inline;opacity:1"
-     transform="translate(-19.393531,-57.374175)">
+     transform="translate(-13.945531,-52.049175)">
     <path
        id="path6"
-       style="display:inline;opacity:1;fill:#000000;fill-opacity:0;stroke:#38505e;stroke-width:4.2243;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       style="display:none;opacity:1;fill:#000000;fill-opacity:0;stroke:#38505e;stroke-width:4.2243;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
        d="m 188.08705,397.90003 474.02242,0 a 15.500141,15.500141 38.446816 0 1 15.09638,11.98534 l 25.14297,107.99111 a 9.7699146,9.7699146 128.44682 0 1 -9.51541,11.98534 H 156.35577 a 9.6976086,9.6976086 51.760272 0 1 -9.42885,-11.96485 l 25.97719,-108.03209 a 15.615711,15.615711 141.76027 0 1 15.18294,-11.96485 z"
        sodipodi:nodetypes="ccccc"
        inkscape:path-effect="#path-effect7"
@@ -152,8 +152,8 @@
        id="rect7"
        width="212.44423"
        height="61.81028"
-       x="96.350639"
-       y="133.87529"
+       x="93.750534"
+       y="132.47517"
        ry="8.6992235" />
   </g>
   <g
@@ -161,7 +161,7 @@
      id="layer1"
      inkscape:label="MiddleTape"
      style="display:inline;opacity:1"
-     transform="translate(-15.1199,-53.100385)">
+     transform="translate(-20.371825,-58.075848)">
     <rect
        style="fill:#ff0001;fill-opacity:1;stroke:none;stroke-width:1.36355;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect850"
@@ -182,7 +182,7 @@
      id="layer2"
      inkscape:label="Outside"
      style="display:inline;opacity:1"
-     transform="translate(-15.1199,-53.100385)">
+     transform="translate(-20.371825,-58.075848)">
     <path
        id="rect1829"
        style="opacity:1;fill:#ffb7b8;fill-opacity:1;stroke:#38505e;stroke-width:2.27259;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -193,7 +193,7 @@
      id="layer3"
      inkscape:label="MiddleOut"
      style="display:inline;opacity:1"
-     transform="translate(-15.1199,-53.100385)">
+     transform="translate(-20.371825,-58.075848)">
     <rect
        style="display:inline;fill:#ffb7b8;fill-opacity:1;stroke:#38505e;stroke-width:2.27259;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect851"
@@ -557,7 +557,7 @@
      id="layer4"
      inkscape:label="BottomBorder"
      style="display:inline;opacity:1"
-     transform="translate(-15.1199,-53.100385)">
+     transform="translate(-20.371825,-58.075848)">
     <path
        id="path8"
        style="display:inline;opacity:1;fill:none;stroke:#e23869;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
@@ -565,7 +565,7 @@
        sodipodi:nodetypes="ccccc"
        inkscape:path-effect="#path-effect9"
        inkscape:original-d="M 175.78115,397.90003 H 674.41537 L 705.1393,529.86182 H 144.04988 Z"
-       transform="matrix(0.45450832,0,0,0.45451704,5.6874232,50.995404)" />
+       transform="matrix(0.45450832,0,0,0.45451704,11.987478,57.495334)" />
     <path
        id="rect2832"
        style="fill:#fb7590;stroke:#38505e;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
@@ -580,7 +580,7 @@
      id="layer5"
      inkscape:label="BottomBorder_Circles"
      style="display:inline"
-     transform="translate(-15.1199,-53.100385)">
+     transform="translate(-20.371825,-58.075848)">
     <ellipse
        style="fill:none;stroke:#38505e;stroke-width:2.31603;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
        id="path1"
