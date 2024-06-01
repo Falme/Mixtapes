@@ -179,6 +179,7 @@ flat = true
 [node name="ColorRect" type="ColorRect" parent="ArrowButton"]
 layout_mode = 1
 anchors_preset = -1
+anchor_top = 0.025
 anchor_right = 0.05
 anchor_bottom = 1.0
 grow_horizontal = 2
