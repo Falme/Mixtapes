@@ -20,7 +20,7 @@ texture = ExtResource("1_uip3j")
 [node name="DragWindow" type="Button" parent="WindowFrame"]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 1.0
+anchor_right = 0.94
 anchor_bottom = 0.057
 grow_horizontal = 2
 grow_vertical = 2
