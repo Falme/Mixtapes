@@ -3,11 +3,15 @@
 
 # MIXTAPES - Short Games Collection
 
+![Mixtapes-0 2](https://github.com/Falme/Mixtapes/assets/5856107/f1ed5f34-0ac4-494f-bb00-b6b179c2cf71)
+
+
 MIXTAPES is a project in [Godot 4.2](https://godotengine.org/download/archive/) that groups together 9 short games intended to be sold at a short price.
 
 ## Currently Working on
 
-- [ ] Improving Visual Appearence
+- [x] Improving Visual Appearence
+- [ ] Run Game Instances Multiple Times
 
 
 ## Why?
