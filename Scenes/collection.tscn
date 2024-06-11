@@ -132,8 +132,8 @@ layout_mode = 1
 
 [node name="ItemManifesto2" parent="WindowContainer/ManifestosContainer" instance=ExtResource("7_1u07s")]
 layout_mode = 1
-anchor_top = 0.333
-anchor_bottom = 0.666
+anchor_top = 0.2
+anchor_bottom = 0.4
 
 [node name="RichTextLabel" parent="WindowContainer/ManifestosContainer/ItemManifesto2" index="0"]
 text = "[wave amp=20.0 freq=5.0 connected=1][center]
@@ -148,8 +148,8 @@ uri = "https://ebeth.itch.io/small-games-manifesto"
 
 [node name="ItemManifesto3" parent="WindowContainer/ManifestosContainer" instance=ExtResource("7_1u07s")]
 layout_mode = 1
-anchor_top = 0.666
-anchor_bottom = 1.0
+anchor_top = 0.4
+anchor_bottom = 0.6
 grow_horizontal = 1
 grow_vertical = 1
 
