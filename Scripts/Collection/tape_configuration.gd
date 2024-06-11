@@ -1,6 +1,6 @@
-extends TextureRect
+extends Control
 
-var this : TextureRect = self
+var this : Control = self
 @export var gameNumber : String
 
 func _ready():
@@ -18,17 +18,14 @@ func _load_info():
 	var gameBanner = infoArray[2].split(":")[1]
 	var gameExecutable = infoArray[3].split(":")[1]
 
-	_load_title(gameTitle)
-	_load_author(gameAuthor)
+	_load_label(gameTitle, gameAuthor)
 	_load_banner(gameBanner)
 	_load_executable(gameExecutable)
 
-func _load_title(_titleName):
-	$TapeLabel/TitleGame.text = _titleName
-	pass
-
-func _load_author(_authorName):
-	$TapeLabel/AuthorGame.text = "👥 "+_authorName
+func _load_label(_titleName, _authorName):
+	var label_text : String = _titleName+"\n"
+	label_text += "👥 "+_authorName
+	$TapeLabel/TitleGame.text = label_text
 	pass
 
 func _load_banner(_bannerName):
@@ -36,7 +33,7 @@ func _load_banner(_bannerName):
 	var imageFile = Image.load_from_file(bannerPath)
 
 	# Load image to Tape Background
-	this.texture = ImageTexture.create_from_image(imageFile)
+	$Tape/GameBGImage.texture = ImageTexture.create_from_image(imageFile)
 
 func _load_executable(_executableName):
 	$ToGame.executableName = _executableName

@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://cjj6ie343hjoh"]
+[gd_scene load_steps=6 format=3 uid="uid://cjj6ie343hjoh"]
 
 [ext_resource type="Script" path="res://Scripts/Collection/tape_configuration.gd" id="1_76dmi"]
 [ext_resource type="Texture2D" uid="uid://vppojqhi5lv3" path="res://Sprites/K7-Icon.svg" id="2_dj6mr"]
+[ext_resource type="Texture2D" uid="uid://cstkygg43nho6" path="res://Sprites/mixtapes_background.svg" id="2_rklxj"]
 [ext_resource type="Texture2D" uid="uid://d3qosjlhtqfct" path="res://Sprites/tape_label.svg" id="3_uldxl"]
 [ext_resource type="Script" path="res://Scripts/ExternalGame/call_external_game.gd" id="4_7nuq8"]
 
-[node name="TapeGame" type="TextureRect"]
+[node name="TapeGame" type="Control"]
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -15,31 +17,46 @@ offset_right = 3.80002
 offset_bottom = 4.95351
 grow_horizontal = 2
 grow_vertical = 2
-expand_mode = 5
-stretch_mode = 5
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("1_76dmi")
 gameNumber = "Game1"
 
-[node name="TapeIcon" type="TextureRect" parent="."]
+[node name="Tape" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -20.692
-offset_top = 18.365
-offset_right = 20.372
-offset_bottom = -7.38998
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameBGImage" type="TextureRect" parent="Tape"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.064
+anchor_top = 0.173
+anchor_right = 0.956
+anchor_bottom = 0.691
+texture = ExtResource("2_rklxj")
+expand_mode = 1
+
+[node name="TapeIcon" type="TextureRect" parent="Tape"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_dj6mr")
-expand_mode = 3
+expand_mode = 1
 stretch_mode = 5
 
 [node name="TapeLabel" type="NinePatchRect" parent="."]
 layout_mode = 1
 anchors_preset = -1
+anchor_left = 0.1
 anchor_top = 0.75
-anchor_right = 1.0
+anchor_right = 0.9
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -55,25 +72,12 @@ anchors_preset = -1
 anchor_left = 0.1
 anchor_top = 0.1
 anchor_right = 0.966
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/normal_font_size = 12
-bbcode_enabled = true
-text = "Title Game"
-
-[node name="AuthorGame" type="RichTextLabel" parent="TapeLabel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.1
-anchor_top = 0.5
-anchor_right = 0.966
 anchor_bottom = 0.9
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/normal_font_size = 12
+theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
-text = "Author Name"
+text = "Title Game"
 
 [node name="ToGame" type="Button" parent="."]
 layout_mode = 1

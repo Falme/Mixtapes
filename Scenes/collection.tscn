@@ -1,7 +1,33 @@
-[gd_scene load_steps=3 format=3 uid="uid://d3341xq470sbq"]
+[gd_scene load_steps=6 format=3 uid="uid://d3341xq470sbq"]
 
 [ext_resource type="PackedScene" uid="uid://cjj6ie343hjoh" path="res://Prefabs/Collection/tape_game.tscn" id="1_d8x02"]
+[ext_resource type="Texture2D" uid="uid://cstkygg43nho6" path="res://Sprites/mixtapes_background.svg" id="1_dcju0"]
+[ext_resource type="Shader" path="res://Shaders/background.gdshader" id="2_j8g3b"]
 [ext_resource type="PackedScene" uid="uid://2d6byacn3gun" path="res://Prefabs/Manifestos/item_manifesto.tscn" id="7_1u07s"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eq1st"]
+shader = ExtResource("2_j8g3b")
+shader_parameter/overlay = true
+shader_parameter/scanlines_opacity = 0.0
+shader_parameter/scanlines_width = 0.239
+shader_parameter/grille_opacity = 0.221
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/pixelate = false
+shader_parameter/roll = false
+shader_parameter/roll_speed = 8.0
+shader_parameter/roll_size = 0.0
+shader_parameter/roll_variation = 0.479
+shader_parameter/distort_intensity = 0.0
+shader_parameter/noise_opacity = 0.0
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.056
+shader_parameter/aberration = 0.03
+shader_parameter/brightness = 1.4
+shader_parameter/discolor = false
+shader_parameter/warp_amount = 0.0
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.0
 
 [node name="Root" type="Control"]
 layout_mode = 3
@@ -11,84 +37,89 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="BackgroundArt" type="ColorRect" parent="."]
+[node name="BackgroundArt" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.985
+anchor_bottom = 0.985
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_dcju0")
+expand_mode = 2
+
+[node name="BackgroundFilter" type="TextureRect" parent="BackgroundArt"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_eq1st")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 12.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_dcju0")
+
+[node name="WindowContainer" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(1, 0.658824, 0.737255, 1)
 
-[node name="TapeArea" type="Control" parent="BackgroundArt"]
+[node name="TapeArea" type="Control" parent="WindowContainer"]
 layout_mode = 1
-anchor_left = 0.124
-anchor_top = 0.057
-anchor_right = 0.386
-anchor_bottom = 0.318
+anchor_left = 0.076
+anchor_top = 0.075
+anchor_right = 0.965
+anchor_bottom = 0.937
 
-[node name="TapeGame1" parent="BackgroundArt/TapeArea" instance=ExtResource("1_d8x02")]
+[node name="GridContainer" type="GridContainer" parent="WindowContainer/TapeArea"]
 layout_mode = 1
-offset_left = 1.8
-offset_right = 1.8
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
 
-[node name="TapeGame2" parent="BackgroundArt/TapeArea" instance=ExtResource("1_d8x02")]
-layout_mode = 1
-offset_left = 239.8
-offset_right = 239.8
+[node name="TapeGame1" parent="WindowContainer/TapeArea/GridContainer" instance=ExtResource("1_d8x02")]
+layout_mode = 2
+
+[node name="TapeGame2" parent="WindowContainer/TapeArea/GridContainer" instance=ExtResource("1_d8x02")]
+layout_mode = 2
 gameNumber = "Game2"
 
-[node name="TapeGame3" parent="BackgroundArt/TapeArea" instance=ExtResource("1_d8x02")]
-layout_mode = 1
-offset_left = 471.8
-offset_right = 471.8
+[node name="TapeGame3" parent="WindowContainer/TapeArea/GridContainer" instance=ExtResource("1_d8x02")]
+layout_mode = 2
 gameNumber = "Game3"
 
-[node name="TapeGame4" parent="BackgroundArt/TapeArea" instance=ExtResource("1_d8x02")]
-layout_mode = 1
-offset_top = 163.8
-offset_bottom = 173.954
+[node name="TapeGame4" parent="WindowContainer/TapeArea/GridContainer" instance=ExtResource("1_d8x02")]
+layout_mode = 2
 gameNumber = "Game4"
 
-[node name="TapeGame5" parent="BackgroundArt/TapeArea" instance=ExtResource("1_d8x02")]
-layout_mode = 1
-offset_left = 239.8
-offset_top = 163.8
-offset_right = 239.8
-offset_bottom = 173.954
+[node name="TapeGame5" parent="WindowContainer/TapeArea/GridContainer" instance=ExtResource("1_d8x02")]
+layout_mode = 2
 gameNumber = "Game5"
 
-[node name="TapeGame6" parent="BackgroundArt/TapeArea" instance=ExtResource("1_d8x02")]
-layout_mode = 1
-offset_left = 471.8
-offset_top = 163.8
-offset_right = 471.8
-offset_bottom = 173.954
+[node name="TapeGame6" parent="WindowContainer/TapeArea/GridContainer" instance=ExtResource("1_d8x02")]
+layout_mode = 2
 gameNumber = "Game6"
 
-[node name="TapeGame7" parent="BackgroundArt/TapeArea" instance=ExtResource("1_d8x02")]
-layout_mode = 1
-offset_top = 332.8
-offset_bottom = 342.953
+[node name="TapeGame7" parent="WindowContainer/TapeArea/GridContainer" instance=ExtResource("1_d8x02")]
+layout_mode = 2
 gameNumber = "Game7"
 
-[node name="TapeGame8" parent="BackgroundArt/TapeArea" instance=ExtResource("1_d8x02")]
-layout_mode = 1
-offset_left = 239.8
-offset_top = 332.8
-offset_right = 239.8
-offset_bottom = 342.953
+[node name="TapeGame8" parent="WindowContainer/TapeArea/GridContainer" instance=ExtResource("1_d8x02")]
+layout_mode = 2
 gameNumber = "Game8"
 
-[node name="TapeGame9" parent="BackgroundArt/TapeArea" instance=ExtResource("1_d8x02")]
-layout_mode = 1
-offset_left = 471.8
-offset_top = 332.8
-offset_right = 471.8
-offset_bottom = 342.953
+[node name="TapeGame9" parent="WindowContainer/TapeArea/GridContainer" instance=ExtResource("1_d8x02")]
+layout_mode = 2
 gameNumber = "Game9"
 
-[node name="ManifestosContainer" type="Control" parent="BackgroundArt"]
+[node name="ManifestosContainer" type="Control" parent="WindowContainer"]
 layout_mode = 1
 anchor_top = 0.1
 anchor_right = 0.1
@@ -96,15 +127,15 @@ anchor_bottom = 0.9
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ItemManifesto" parent="BackgroundArt/ManifestosContainer" instance=ExtResource("7_1u07s")]
+[node name="ItemManifesto" parent="WindowContainer/ManifestosContainer" instance=ExtResource("7_1u07s")]
 layout_mode = 1
 
-[node name="ItemManifesto2" parent="BackgroundArt/ManifestosContainer" instance=ExtResource("7_1u07s")]
+[node name="ItemManifesto2" parent="WindowContainer/ManifestosContainer" instance=ExtResource("7_1u07s")]
 layout_mode = 1
-anchor_top = 0.333
-anchor_bottom = 0.666
+anchor_top = 0.2
+anchor_bottom = 0.4
 
-[node name="RichTextLabel" parent="BackgroundArt/ManifestosContainer/ItemManifesto2" index="0"]
+[node name="RichTextLabel" parent="WindowContainer/ManifestosContainer/ItemManifesto2" index="0"]
 text = "[wave amp=20.0 freq=5.0 connected=1][center]
 
 [b]Small Games Manifesto[/b] 
@@ -112,27 +143,27 @@ text = "[wave amp=20.0 freq=5.0 connected=1][center]
 [/center][/wave]
 "
 
-[node name="Link" parent="BackgroundArt/ManifestosContainer/ItemManifesto2" index="1"]
+[node name="Link" parent="WindowContainer/ManifestosContainer/ItemManifesto2" index="1"]
 uri = "https://ebeth.itch.io/small-games-manifesto"
 
-[node name="ItemManifesto3" parent="BackgroundArt/ManifestosContainer" instance=ExtResource("7_1u07s")]
+[node name="ItemManifesto3" parent="WindowContainer/ManifestosContainer" instance=ExtResource("7_1u07s")]
 layout_mode = 1
-anchor_top = 0.666
-anchor_bottom = 1.0
+anchor_top = 0.4
+anchor_bottom = 0.6
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="RichTextLabel" parent="BackgroundArt/ManifestosContainer/ItemManifesto3" index="0"]
+[node name="RichTextLabel" parent="WindowContainer/ManifestosContainer/ItemManifesto3" index="0"]
 text = "[wave amp=20.0 freq=5.0 connected=1][center]
 
-[b]Level Flow for a Video Game Mixtape[/b] 
+[b] Level Flow for a Video Game Mixtape[/b] 
 👥 [i]Alejandro Quan-Madrid[/i]
 [/center][/wave]
 "
 
-[node name="Link" parent="BackgroundArt/ManifestosContainer/ItemManifesto3" index="1"]
+[node name="Link" parent="WindowContainer/ManifestosContainer/ItemManifesto3" index="1"]
 uri = "https://www.youtube.com/watch?v=I1yBJD4yRss"
 
-[editable path="BackgroundArt/ManifestosContainer/ItemManifesto"]
-[editable path="BackgroundArt/ManifestosContainer/ItemManifesto2"]
-[editable path="BackgroundArt/ManifestosContainer/ItemManifesto3"]
+[editable path="WindowContainer/ManifestosContainer/ItemManifesto"]
+[editable path="WindowContainer/ManifestosContainer/ItemManifesto2"]
+[editable path="WindowContainer/ManifestosContainer/ItemManifesto3"]

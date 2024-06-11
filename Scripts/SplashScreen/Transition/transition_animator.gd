@@ -31,19 +31,19 @@ func _initialize_colors():
 	flag_colors_size = flag_colors_data["flags"][flag_colors_index]["colors"].size()
 	
 	# initialize Flag Stripes array
-	_flag_stripes.resize(80)
+	_flag_stripes.resize(120)
 
 func _initialize_flag_animation_instantiation():
 	flag_animation_instance = flag_animation_prefab.instantiate()
 
 
 func _slide_in_flag_animation():
-	for n in 80:
+	for n in _flag_stripes.size():
 		await get_tree().create_timer(0.02).timeout
 		add_flag_strip(n)
 
 func _slide_out_flag_animation():
-	for n in 80:
+	for n in _flag_stripes.size():
 		await get_tree().create_timer(0.02).timeout
 		_flag_stripes[n].local_play("slide_down")
 	pass
