@@ -3,11 +3,16 @@
 
 # MIXTAPES - Coleção de Jogos Curtos
 
+![Mixtapes-0 2](https://github.com/Falme/Mixtapes/assets/5856107/f1ed5f34-0ac4-494f-bb00-b6b179c2cf71)
+
+
+
 MIXTAPES é um projeto feito em [Godot 4.2](https://godotengine.org/download/archive/) que agrupa 9 jogos curtos com a intenção de ser vendido a um preço curto.
 
 ## Atualmente trabalhando com:
 
-- [ ] Melhorias na aparência visual
+- [x] Melhorias na aparência visual
+- [ ] Multiplas execuções dos jogos
 
 
 ## Motivo?
