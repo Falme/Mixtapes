@@ -27,6 +27,10 @@ window/size/viewport_height=900
 window/size/resizable=false
 window/size/borderless=true
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gut/plugin.cfg")
+
 [internationalization]
 
 locale/translations=PackedStringArray("res://Localizations/localization.en.translation", "res://Localizations/localization.pt_BR.translation")
