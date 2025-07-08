@@ -1,0 +1,16 @@
+{
+	"os":[
+		{
+			"id":"Windows",
+			"command":"CMD.exe",
+			"argA":"/C",
+			"argB":"cd %s && %s"
+		},
+		{
+			"id":"Linux",
+			"command":"sh",
+			"argA":"-c",
+			"argB":"cd %s && ./%s"
+		}
+	]
+}

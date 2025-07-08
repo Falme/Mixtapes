@@ -6,6 +6,9 @@ var this : Control = self
 const gamesFolder : String = "Games"
 const infoFolder : String = "mixtape_info.txt"
 
+const splitCharacter : String = ":"
+const authorIcon: String = "👥 "
+
 var gamePath : String
 
 @export var gameNumber : String
@@ -21,10 +24,10 @@ func _load_info():
 
 	var infoArray = content.split("\r\n")
 
-	var gameTitle = infoArray[0].split(":")[1]
-	var gameAuthor = infoArray[1].split(":")[1]
-	var gameBanner = infoArray[2].split(":")[1]
-	var gameExecutable = infoArray[3].split(":")[1]
+	var gameTitle = infoArray[0].split(splitCharacter)[1]
+	var gameAuthor = infoArray[1].split(splitCharacter)[1]
+	var gameBanner = infoArray[2].split(splitCharacter)[1]
+	var gameExecutable = infoArray[3].split(splitCharacter)[1]
 
 	_load_label(gameTitle, gameAuthor)
 	_load_banner(gameBanner)
@@ -32,7 +35,7 @@ func _load_info():
 
 func _load_label(_titleName, _authorName):
 	var label_text : String = _titleName+"\n"
-	label_text += "👥 "+_authorName
+	label_text += authorIcon+_authorName
 	$TapeLabel/TitleGame.text = label_text
 
 func _load_banner(_bannerName):

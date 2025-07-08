@@ -7,9 +7,7 @@ var lastCursorPosition : Vector2i
 
 
 func _process(delta):
-	
 	cursorDelta = lastCursorPosition - _get_screen_mouse_position()
-	
 	
 	if isDragging:
 		var newWindowPosition : Vector2i = _get_screen_mouse_position() - Vector2i((get_window().size.x/2), 20)
