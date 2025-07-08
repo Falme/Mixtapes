@@ -1,3 +1,4 @@
+class_name DragWindow
 extends Node
 
 var isDragging : bool = false
@@ -13,10 +14,8 @@ func _process(delta):
 	if isDragging:
 		var newWindowPosition : Vector2i = _get_screen_mouse_position() - Vector2i((get_window().size.x/2), 20)
 		
-		if(newWindowPosition.x < 0):
-			newWindowPosition.x = 0
-		if(newWindowPosition.y < 0):
-			newWindowPosition.y = 0
+		newWindowPosition.x = maxf(0, newWindowPosition.x)
+		newWindowPosition.y = maxf(0, newWindowPosition.y)
 		get_window().position = newWindowPosition
 	
 	

@@ -1,3 +1,4 @@
+class_name SlideManifestoButton
 extends NinePatchRect
 
 var on_right : bool  = false

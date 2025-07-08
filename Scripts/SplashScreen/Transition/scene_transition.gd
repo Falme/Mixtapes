@@ -1,3 +1,4 @@
+class_name SceneTransition
 extends Control
 
 func _ready() -> void:

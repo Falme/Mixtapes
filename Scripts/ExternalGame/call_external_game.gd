@@ -1,3 +1,4 @@
+class_name CallExternalGame
 extends Button
 
 var executableName : String
@@ -10,7 +11,6 @@ func _ready():
 
 func _on_pressed() -> void:
 	thread.start(_open_game.bind())
-	pass
 
 func _open_game() -> void:
 	var path: String = OS.get_executable_path().get_base_dir().path_join("Games").path_join(gameNumber)
@@ -26,8 +26,6 @@ func _open_game() -> void:
 		args = ["-c", "cd "+path+" && ./"+executableName]
 
 	OS.execute(command, args, [])
-
-	pass
 
 func _exit_tree():
 	thread.wait_to_finish()

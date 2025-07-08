@@ -1,3 +1,4 @@
+class_name TransitionAnimator
 extends Node
 
 var flag_animation_prefab = preload("res://Prefabs/Transition/slide_flag.tscn")

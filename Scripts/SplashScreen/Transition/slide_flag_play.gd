@@ -1,3 +1,4 @@
+class_name SlideFlagPlay
 extends Control
 
 func local_position(_position):

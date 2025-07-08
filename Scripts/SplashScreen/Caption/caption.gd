@@ -1,3 +1,4 @@
+class_name Caption
 extends RichTextLabel
 
 @onready var this: RichTextLabel = self 
