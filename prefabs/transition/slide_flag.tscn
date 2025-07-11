@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://nxnati7gbg11"]
 
-[ext_resource type="Script" path="res://Scripts/SplashScreen/Transition/slide_flag_play.gd" id="1_qfx4s"]
-[ext_resource type="AnimationLibrary" uid="uid://d4bl4t4n8uma0" path="res://Animations/slide_flag.res" id="2_ipvmv"]
+[ext_resource type="Script" path="res://scripts/splash_screen/transition/slide_flag_play.gd" id="1_qfx4s"]
+[ext_resource type="AnimationLibrary" uid="uid://d4bl4t4n8uma0" path="res://animations/slide_flag.res" id="2_ipvmv"]
 
 [node name="SlideFlag" type="Control"]
 layout_mode = 3

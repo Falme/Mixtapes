@@ -10,5 +10,5 @@ func changeScene():
 	pass
 
 func loadCollectionScene():
-	get_tree().change_scene_to_file("res://Scenes/collection.tscn")
+	get_tree().change_scene_to_file("res://scenes/collection.tscn")
 	pass

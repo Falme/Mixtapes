@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://d3341xq470sbq"]
 
-[ext_resource type="PackedScene" uid="uid://cjj6ie343hjoh" path="res://Prefabs/Collection/tape_game.tscn" id="1_d8x02"]
-[ext_resource type="Texture2D" uid="uid://cstkygg43nho6" path="res://Sprites/mixtapes_background.svg" id="1_dcju0"]
-[ext_resource type="Shader" path="res://Shaders/background.gdshader" id="2_j8g3b"]
-[ext_resource type="PackedScene" uid="uid://2d6byacn3gun" path="res://Prefabs/Manifestos/item_manifesto.tscn" id="7_1u07s"]
+[ext_resource type="PackedScene" uid="uid://cjj6ie343hjoh" path="res://prefabs/collection/tape_game.tscn" id="1_d8x02"]
+[ext_resource type="Texture2D" uid="uid://cstkygg43nho6" path="res://sprites/mixtapes_background.svg" id="1_dcju0"]
+[ext_resource type="Shader" path="res://shaders/background.gdshader" id="2_j8g3b"]
+[ext_resource type="PackedScene" uid="uid://2d6byacn3gun" path="res://prefabs/manifestos/item_manifesto.tscn" id="7_1u07s"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eq1st"]
 shader = ExtResource("2_j8g3b")

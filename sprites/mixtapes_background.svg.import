@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://872ldpcnwk0g"
-path="res://.godot/imported/Button-Arrow.svg-c4bb93d615fd9ecfe2eb5f98c6053c1d.ctex"
+uid="uid://cstkygg43nho6"
+path="res://.godot/imported/mixtapes_background.svg-218b00bcf15164adf87887456117c163.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Button-Arrow.svg"
-dest_files=["res://.godot/imported/Button-Arrow.svg-c4bb93d615fd9ecfe2eb5f98c6053c1d.ctex"]
+source_file="res://sprites/mixtapes_background.svg"
+dest_files=["res://.godot/imported/mixtapes_background.svg-218b00bcf15164adf87887456117c163.ctex"]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cpbegqsmuerbq"]
 
-[ext_resource type="Script" path="res://Scripts/SplashScreen/Transition/transition_animator.gd" id="1_oisaw"]
+[ext_resource type="Script" path="res://scripts/splash_screen/transition/transition_animator.gd" id="1_oisaw"]
 
 [node name="AnimationIntro" type="CanvasLayer"]
 layer = 10

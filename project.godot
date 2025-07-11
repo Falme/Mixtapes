@@ -11,14 +11,14 @@ config_version=5
 [application]
 
 config/name="Mixtapes"
-run/main_scene="res://Scenes/splash.tscn"
+run/main_scene="res://scenes/splash.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-AnimationIntro="*res://Prefabs/Transition/animation_intro.tscn"
-WindowFrame="*res://Prefabs/WindowFrame/window_frame.tscn"
+AnimationIntro="*res://prefabs/transition/animation_intro.tscn"
+WindowFrame="*res://prefabs/windowFrame/window_frame.tscn"
 
 [display]
 
@@ -33,7 +33,7 @@ enabled=PackedStringArray("res://addons/gut/plugin.cfg")
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://Localizations/localization.en.translation", "res://Localizations/localization.pt_BR.translation")
+locale/translations=PackedStringArray("res://localizations/localization.en.translation", "res://localizations/localization.pt_BR.translation")
 
 [rendering]
 

@@ -6,7 +6,7 @@ var gameNumber : String
 
 const gamesFolder : String = "Games"
 
-var os_data_path = "res://Data/os_runner/os_runner.json"
+var os_data_path = "res://data/os_runner/os_runner.json"
 var os_data = {}
 
 var thread: Thread

@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://ckd1g6t58vmd0"]
 
-[ext_resource type="Texture2D" uid="uid://enmxh4sidk6h" path="res://Sprites/mixtapes_windowframe.svg" id="1_uip3j"]
-[ext_resource type="Script" path="res://Scripts/DragWindow/drag_window.gd" id="2_gxhl3"]
-[ext_resource type="Script" path="res://Scripts/CloseWindow/close_window.gd" id="2_ul5r4"]
+[ext_resource type="Texture2D" uid="uid://enmxh4sidk6h" path="res://sprites/mixtapes_windowframe.svg" id="1_uip3j"]
+[ext_resource type="Script" path="res://scripts/drag_window/drag_window.gd" id="2_gxhl3"]
+[ext_resource type="Script" path="res://scripts/close_window/close_window.gd" id="2_ul5r4"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qek4g"]
 

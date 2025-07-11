@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vppojqhi5lv3"
-path="res://.godot/imported/K7-Icon.svg-cb455f9560b0bf44a0405e551a17e6c2.ctex"
+uid="uid://d3qosjlhtqfct"
+path="res://.godot/imported/tape_label.svg-02ed030c74980b3e72aaa177ba96544f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/K7-Icon.svg"
-dest_files=["res://.godot/imported/K7-Icon.svg-cb455f9560b0bf44a0405e551a17e6c2.ctex"]
+source_file="res://sprites/tape_label.svg"
+dest_files=["res://.godot/imported/tape_label.svg-02ed030c74980b3e72aaa177ba96544f.ctex"]
 
 [params]
 

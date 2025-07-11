@@ -1,8 +1,8 @@
 [gd_scene load_steps=13 format=3 uid="uid://ic1of68v31pd"]
 
-[ext_resource type="Script" path="res://Scripts/SplashScreen/Transition/scene_transition.gd" id="1_ddj8f"]
-[ext_resource type="Texture2D" uid="uid://vppojqhi5lv3" path="res://Sprites/K7-Icon.svg" id="2_bq5me"]
-[ext_resource type="Script" path="res://Scripts/SplashScreen/Caption/caption.gd" id="3_y064v"]
+[ext_resource type="Script" path="res://scripts/splash_screen/transition/scene_transition.gd" id="1_cmcgo"]
+[ext_resource type="Texture2D" uid="uid://vppojqhi5lv3" path="res://sprites/K7-Icon.svg" id="2_4r678"]
+[ext_resource type="Script" path="res://scripts/splash_screen/caption/caption.gd" id="3_vaamh"]
 
 [sub_resource type="Animation" id="Animation_h6f46"]
 length = 0.001
@@ -118,7 +118,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ddj8f")
+script = ExtResource("1_cmcgo")
 
 [node name="SplashScreen" type="ColorRect" parent="."]
 layout_mode = 1
@@ -180,7 +180,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(200, 112)
-texture = ExtResource("2_bq5me")
+texture = ExtResource("2_4r678")
 expand_mode = 3
 stretch_mode = 5
 
@@ -194,7 +194,7 @@ anchor_bottom = 0.9
 bbcode_enabled = true
 text = "[outline_color=cyan][outline_size=2][font_size=26][center][b]Eat The Rich"
 fit_content = true
-script = ExtResource("3_y064v")
+script = ExtResource("3_vaamh")
 possibleCaptions = Array[String](["caption_1", "caption_2", "caption_3", "caption_4", "caption_5", "caption_6", "caption_7", "caption_8"])
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SplashScreen"]

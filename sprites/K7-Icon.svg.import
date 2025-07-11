@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://enmxh4sidk6h"
-path="res://.godot/imported/mixtapes_windowframe.svg-75ad9ec7faa190f2d08926f6a1a4e60b.ctex"
+uid="uid://vppojqhi5lv3"
+path="res://.godot/imported/K7-Icon.svg-6f374e84954c43abbd26faace0646cb5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/mixtapes_windowframe.svg"
-dest_files=["res://.godot/imported/mixtapes_windowframe.svg-75ad9ec7faa190f2d08926f6a1a4e60b.ctex"]
+source_file="res://sprites/K7-Icon.svg"
+dest_files=["res://.godot/imported/K7-Icon.svg-6f374e84954c43abbd26faace0646cb5.ctex"]
 
 [params]
 

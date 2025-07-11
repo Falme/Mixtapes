@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://2d6byacn3gun"]
 
-[ext_resource type="Texture2D" uid="uid://d2jx8end7xq5n" path="res://Sprites/Button.svg" id="1_y17p6"]
-[ext_resource type="Script" path="res://Scripts/Manifestos/slide_manifesto_button.gd" id="2_q0kwh"]
-[ext_resource type="Texture2D" uid="uid://872ldpcnwk0g" path="res://Sprites/Button-Arrow.svg" id="3_hg6t0"]
+[ext_resource type="Texture2D" uid="uid://d2jx8end7xq5n" path="res://sprites/Button.svg" id="1_y17p6"]
+[ext_resource type="Script" path="res://scripts/manifestos/slide_manifesto_button.gd" id="2_q0kwh"]
+[ext_resource type="Texture2D" uid="uid://872ldpcnwk0g" path="res://sprites/Button-Arrow.svg" id="3_hg6t0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t8o2t"]
 

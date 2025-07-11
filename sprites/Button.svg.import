@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3qosjlhtqfct"
-path="res://.godot/imported/tape_label.svg-4506254dcc40a6df550d5926d9bd19ff.ctex"
+uid="uid://d2jx8end7xq5n"
+path="res://.godot/imported/Button.svg-6ed2451f8e2536cbc16345582614a0f3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/tape_label.svg"
-dest_files=["res://.godot/imported/tape_label.svg-4506254dcc40a6df550d5926d9bd19ff.ctex"]
+source_file="res://sprites/Button.svg"
+dest_files=["res://.godot/imported/Button.svg-6ed2451f8e2536cbc16345582614a0f3.ctex"]
 
 [params]
 

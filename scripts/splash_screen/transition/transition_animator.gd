@@ -1,9 +1,9 @@
 class_name TransitionAnimator
 extends Node
 
-var flag_animation_prefab = preload("res://Prefabs/Transition/slide_flag.tscn")
+var flag_animation_prefab = preload("res://prefabs/transition/slide_flag.tscn")
 var flag_animation_instance : Control
-var flag_colors_data_path = "res://Data/flagcolors.json"
+var flag_colors_data_path = "res://data/flagcolors.json"
 var flag_colors_data = {}
 var flag_colors_index = 0
 var flag_colors_size = 0
