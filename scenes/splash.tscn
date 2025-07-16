@@ -1,7 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://ic1of68v31pd"]
+[gd_scene load_steps=17 format=3 uid="uid://ic1of68v31pd"]
 
 [ext_resource type="Script" path="res://scripts/splash_screen/transition/scene_transition.gd" id="1_cmcgo"]
-[ext_resource type="Texture2D" uid="uid://vppojqhi5lv3" path="res://sprites/K7-Icon.svg" id="2_4r678"]
+[ext_resource type="Texture2D" uid="uid://vppojqhi5lv3" path="res://sprites/k7-icon.svg" id="2_4r678"]
 [ext_resource type="Script" path="res://scripts/splash_screen/caption/caption.gd" id="3_vaamh"]
 
 [sub_resource type="Animation" id="Animation_h6f46"]
@@ -9,7 +9,7 @@ length = 0.001
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AnimationFeelTitle/Title:rotation")
+tracks/0/path = NodePath("AnimationTitle/Title:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -24,12 +24,12 @@ loop_mode = 1
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AnimationFeelTitle/Title:rotation")
+tracks/0/path = NodePath("AnimationTitle/Title:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0, 0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -0.148353, -0.25, 0, 0.25, 0, 0.106465, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"handle_modes": PackedInt32Array(2, 0, 0, 2),
+"points": PackedFloat32Array(0, 0, 0, 0.1, 0, -0.148353, -0.25, 0, 0.25, 0, 0.106465, -0.25, 0, 0.25, 0, 0, -0.05, 0.0177442, 0, 0),
 "times": PackedFloat32Array(0, 0.3, 0.7, 1)
 }
 
@@ -38,6 +38,16 @@ _data = {
 "RESET": SubResource("Animation_h6f46"),
 "swing-wave-loop": SubResource("Animation_ookan")
 }
+
+[sub_resource type="FontVariation" id="FontVariation_cligi"]
+variation_embolden = 1.0
+spacing_glyph = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_jypkh"]
+font = SubResource("FontVariation_cligi")
+font_size = 50
+outline_size = 2
+outline_color = Color(0, 1, 1, 1)
 
 [sub_resource type="Animation" id="Animation_e22mb"]
 length = 0.001
@@ -64,8 +74,8 @@ tracks/0/path = NodePath(".:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0, 0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -0.0872665, -0.25, 0, 0.25, 0, 0.0872665, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"handle_modes": PackedInt32Array(2, 0, 0, 0),
+"points": PackedFloat32Array(0, 0, 0, 0.333333, 0, -0.0872665, -0.25, 0, 0.25, 0, 0.0872665, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 1, 2, 3)
 }
 
@@ -74,6 +84,16 @@ _data = {
 "RESET": SubResource("Animation_e22mb"),
 "swing-wave-loop": SubResource("Animation_yn8hd")
 }
+
+[sub_resource type="FontVariation" id="FontVariation_q8dib"]
+variation_embolden = 1.0
+spacing_glyph = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_w1fa8"]
+font = SubResource("FontVariation_q8dib")
+font_size = 26
+outline_size = 2
+outline_color = Color(0, 1, 1, 1)
 
 [sub_resource type="Animation" id="Animation_7qsg2"]
 length = 0.001
@@ -129,13 +149,13 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="AnimationFeelTitle" type="AnimationPlayer" parent="SplashScreen"]
+[node name="AnimationTitle" type="AnimationPlayer" parent="SplashScreen"]
 libraries = {
 "": SubResource("AnimationLibrary_xpbiu")
 }
 autoplay = "swing-wave-loop"
 
-[node name="Title" type="RichTextLabel" parent="SplashScreen/AnimationFeelTitle"]
+[node name="Title" type="Label" parent="SplashScreen/AnimationTitle"]
 anchors_preset = -1
 anchor_left = 0.333
 anchor_top = 0.5
@@ -143,18 +163,21 @@ anchor_right = 0.666
 anchor_bottom = 0.6
 offset_bottom = 9.0
 pivot_offset = Vector2(200, 50)
-bbcode_enabled = true
-text = "[outline_color=cyan][outline_size=2][font_size=50][center][b]Mixtapes"
-fit_content = true
+theme_override_colors/font_outline_color = Color(0, 1, 1, 1)
+theme_override_constants/outline_size = 2
+text = "Mixtapes"
+label_settings = SubResource("LabelSettings_jypkh")
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="AnimationFeelTape" type="AnimationPlayer" parent="SplashScreen"]
+[node name="AnimationTape" type="AnimationPlayer" parent="SplashScreen"]
 root_node = NodePath("Tape")
 libraries = {
 "": SubResource("AnimationLibrary_m74m1")
 }
 autoplay = "swing-wave-loop"
 
-[node name="Tape" type="Control" parent="SplashScreen/AnimationFeelTape"]
+[node name="Tape" type="Control" parent="SplashScreen/AnimationTape"]
 layout_mode = 3
 anchor_left = 0.333
 anchor_top = 0.2
@@ -162,7 +185,7 @@ anchor_right = 0.666
 anchor_bottom = 0.45
 pivot_offset = Vector2(200, 112)
 
-[node name="ColorRect" type="ColorRect" parent="SplashScreen/AnimationFeelTape/Tape"]
+[node name="ColorRect" type="ColorRect" parent="SplashScreen/AnimationTape/Tape"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
@@ -172,7 +195,7 @@ anchor_bottom = 0.75
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="SplashScreen/AnimationFeelTape/Tape"]
+[node name="TextureRect" type="TextureRect" parent="SplashScreen/AnimationTape/Tape"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -184,16 +207,18 @@ texture = ExtResource("2_4r678")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="Caption" type="RichTextLabel" parent="SplashScreen"]
+[node name="Caption" type="Label" parent="SplashScreen"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
 anchor_top = 0.9
 anchor_right = 0.9
 anchor_bottom = 0.9
-bbcode_enabled = true
-text = "[outline_color=cyan][outline_size=2][font_size=26][center][b]Eat The Rich"
-fit_content = true
+offset_bottom = 36.0
+text = "Eat The Rich"
+label_settings = SubResource("LabelSettings_w1fa8")
+horizontal_alignment = 1
+vertical_alignment = 1
 script = ExtResource("3_vaamh")
 possibleCaptions = Array[String](["caption_1", "caption_2", "caption_3", "caption_4", "caption_5", "caption_6", "caption_7", "caption_8"])
 
