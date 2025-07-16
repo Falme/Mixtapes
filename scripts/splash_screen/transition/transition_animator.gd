@@ -12,13 +12,7 @@ var _flag_stripes: Array[Control] = []
 func start_transition(action:Callable):
 	_initialize_colors()
 	_initialize_flag_animation_instantiation()
-	_slide_in_flag_animation()
-	
-	await get_tree().create_timer(4).timeout
-	
-	action.call()
-	
-	_slide_out_flag_animation()
+	_slide_in_flag_animation(action)
 
 func _initialize_colors():	
 	# Load JSON File
@@ -38,19 +32,20 @@ func _initialize_flag_animation_instantiation():
 	flag_animation_instance = flag_animation_prefab.instantiate()
 
 
-func _slide_in_flag_animation():
+func _slide_in_flag_animation(action:Callable):
 	for n in _flag_stripes.size():
 		await get_tree().create_timer(0.02).timeout
 		add_flag_strip(n)
+	await get_tree().create_timer(1).timeout
+	action.call()
+	_slide_out_flag_animation()
 
 func _slide_out_flag_animation():
 	for n in _flag_stripes.size():
 		await get_tree().create_timer(0.02).timeout
 		_flag_stripes[n].local_play("slide_down")
-	pass
 
 func add_flag_strip(index) -> void:
-	
 	var _r = (flag_colors_data["flags"][flag_colors_index]["colors"][(index%flag_colors_size)]["r"])/255
 	var _g = (flag_colors_data["flags"][flag_colors_index]["colors"][(index%flag_colors_size)]["g"])/255
 	var _b = (flag_colors_data["flags"][flag_colors_index]["colors"][(index%flag_colors_size)]["b"])/255
