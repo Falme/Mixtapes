@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="30"
+   height="30"
+   viewBox="0 0 30 30"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (1:1.4.2+202505120737+ebf0e940d0)"
+   sodipodi:docname="close_button.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="16"
+     inkscape:cx="13"
+     inkscape:cy="18.96875"
+     inkscape:window-width="1514"
+     inkscape:window-height="1012"
+     inkscape:window-x="10"
+     inkscape:window-y="52"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer4" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       inkscape:groupmode="layer"
+       id="layer2"
+       inkscape:label="Border">
+      <path
+         style="fill:#595959;fill-opacity:1;-inkscape-stroke:none"
+         d="M 27.5,0 V 27.5 H 0 L 5,30 H 30 V 5 Z"
+         id="path1"
+         sodipodi:nodetypes="ccccccc" />
+    </g>
+    <rect
+       style="display:inline;fill:#ffccbb;fill-opacity:1;stroke:#38505e;stroke-width:3.80746;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect6"
+       width="23.692537"
+       height="23.692537"
+       x="1.903729"
+       y="1.903729"
+       inkscape:label="CloseButton" />
+    <g
+       inkscape:groupmode="layer"
+       id="layer4"
+       inkscape:label="X"
+       style="display:inline"
+       transform="translate(-1139.5991,-15.242664)">
+      <path
+         style="fill:none;stroke:#38505e;stroke-width:2.73172;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         d="m 1145.1383,37.216317 16.6754,-16.817718"
+         id="path6" />
+      <path
+         style="fill:none;stroke:#38505e;stroke-width:2.73172;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         d="M 1161.4514,37.23113 1144.7759,20.413416"
+         id="path7" />
+    </g>
+  </g>
+</svg>

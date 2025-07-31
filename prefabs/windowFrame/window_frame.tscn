@@ -1,12 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://ckd1g6t58vmd0"]
+[gd_scene load_steps=5 format=3 uid="uid://ckd1g6t58vmd0"]
 
 [ext_resource type="Texture2D" uid="uid://enmxh4sidk6h" path="res://sprites/mixtapes_windowframe.svg" id="1_uip3j"]
 [ext_resource type="Script" path="res://scripts/drag_window/drag_window.gd" id="2_gxhl3"]
-[ext_resource type="Script" path="res://scripts/close_window/close_window.gd" id="2_ul5r4"]
+[ext_resource type="PackedScene" uid="uid://bsme2nj65dbcj" path="res://prefabs/windowFrame/close_window.tscn" id="3_0inec"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qek4g"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r8g7m"]
 
 [node name="WindowFrame" type="CanvasLayer"]
 layer = 20
@@ -29,21 +27,17 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_qek4g")
 flat = true
 script = ExtResource("2_gxhl3")
 
-[node name="CloseWindow" type="Button" parent="WindowFrame"]
+[node name="CloseWindow" parent="WindowFrame" instance=ExtResource("3_0inec")]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.95
-anchor_top = 0.017
-anchor_right = 0.975
-anchor_bottom = 0.05
-grow_horizontal = 2
-grow_vertical = 2
-mouse_default_cursor_shape = 2
-theme_override_styles/focus = SubResource("StyleBoxEmpty_r8g7m")
-flat = true
-script = ExtResource("2_ul5r4")
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -64.505
+offset_top = 10.62
+offset_right = -26.505
+offset_bottom = 48.62
+grow_horizontal = 0
 
 [connection signal="button_down" from="WindowFrame/DragWindow" to="WindowFrame/DragWindow" method="_on_button_down"]
 [connection signal="button_up" from="WindowFrame/DragWindow" to="WindowFrame/DragWindow" method="_on_button_up"]
 [connection signal="pressed" from="WindowFrame/DragWindow" to="WindowFrame/DragWindow" method="_on_pressed"]
-[connection signal="pressed" from="WindowFrame/CloseWindow" to="WindowFrame/CloseWindow" method="_on_pressed"]
