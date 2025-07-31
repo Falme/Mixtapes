@@ -185,7 +185,7 @@ anchor_right = 0.666
 anchor_bottom = 0.45
 pivot_offset = Vector2(200, 112)
 
-[node name="ColorRect" type="ColorRect" parent="SplashScreen/AnimationTape/Tape"]
+[node name="tape_background" type="ColorRect" parent="SplashScreen/AnimationTape/Tape"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
@@ -195,7 +195,7 @@ anchor_bottom = 0.75
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="SplashScreen/AnimationTape/Tape"]
+[node name="tape_image" type="TextureRect" parent="SplashScreen/AnimationTape/Tape"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
