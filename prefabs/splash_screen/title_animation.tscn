@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=3 uid="uid://ph66yiohfyt6"]
+
+[sub_resource type="Animation" id="Animation_h6f46"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TitleAnimation/Title:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_ookan"]
+resource_name = "swing-wave-loop"
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TitleAnimation/Title:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(2, 0, 0, 2),
+"points": PackedFloat32Array(0, 0, 0, 0.1, 0, -0.148353, -0.25, 0, 0.25, 0, 0.106465, -0.25, 0, 0.25, 0, 0, -0.05, 0.0177442, 0, 0),
+"times": PackedFloat32Array(0, 0.3, 0.7, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xpbiu"]
+_data = {
+"RESET": SubResource("Animation_h6f46"),
+"swing-wave-loop": SubResource("Animation_ookan")
+}
+
+[sub_resource type="FontVariation" id="FontVariation_cligi"]
+variation_embolden = 1.0
+spacing_glyph = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_jypkh"]
+font = SubResource("FontVariation_cligi")
+font_size = 50
+outline_size = 2
+outline_color = Color(0, 1, 1, 1)
+
+[node name="TitleAnimation" type="AnimationPlayer"]
+libraries = {
+"": SubResource("AnimationLibrary_xpbiu")
+}
+autoplay = "swing-wave-loop"
+
+[node name="Title" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.333
+anchor_top = 0.5
+anchor_right = 0.666
+anchor_bottom = 0.6
+offset_bottom = 9.0
+pivot_offset = Vector2(200, 50)
+theme_override_colors/font_outline_color = Color(0, 1, 1, 1)
+theme_override_constants/outline_size = 2
+text = "Mixtapes"
+label_settings = SubResource("LabelSettings_jypkh")
+horizontal_alignment = 1
+vertical_alignment = 1
