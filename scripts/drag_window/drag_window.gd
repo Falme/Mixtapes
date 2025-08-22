@@ -4,18 +4,15 @@ var isDragging : bool = false
 var cursorDelta : Vector2i
 var lastCursorPosition : Vector2i
 
-func _ready() -> void:
-	Input.use_accumulated_input = true
-
 func _process(_delta):
 	cursorDelta = lastCursorPosition - _get_screen_mouse_position()
 
-	if isDragging && cursorDelta != Vector2i.ZERO:
-		var windowPosition = DisplayServer.window_get_position()
-		var newWindowPosition : Vector2i = windowPosition - cursorDelta
+	if isDragging:
+		var windowPosition : Vector2i = DisplayServer.window_get_position()
+		var newWindowPosition : Vector2i = (windowPosition - Vector2i(3,3)) - cursorDelta
 		
-		newWindowPosition.x = clamp(newWindowPosition.x, 0, DisplayServer.screen_get_size().x)
-		newWindowPosition.y = clamp(newWindowPosition.y, 0, DisplayServer.screen_get_size().y)
+		newWindowPosition.x = clamp(newWindowPosition.x, 0, DisplayServer.screen_get_size().x - DisplayServer.window_get_size().x)
+		newWindowPosition.y = clamp(newWindowPosition.y, 0, DisplayServer.screen_get_size().y - DisplayServer.window_get_size().y)
 		get_window().position = newWindowPosition
 		# DisplayServer.window_set_position(newWindowPosition)
 		# DisplayServer.window_set_position(_get_screen_mouse_position()-Vector2i(600,20))
