@@ -1,36 +1,20 @@
-class_name DragWindow
-extends Node
+class_name DragWindow extends Button
 
 var isDragging : bool = false
-var cursorDelta : Vector2i
-var lastCursorPosition : Vector2i
+var cursorOffset : Vector2i
 
-
-func _process(delta):
-	cursorDelta = lastCursorPosition - _get_screen_mouse_position()
-	
+func _process(_delta):
 	if isDragging:
-		var newWindowPosition : Vector2i = _get_screen_mouse_position() - Vector2i((get_window().size.x/2), 20)
-		
-		newWindowPosition.x = maxf(0, newWindowPosition.x)
-		newWindowPosition.y = maxf(0, newWindowPosition.y)
-		get_window().position = newWindowPosition
-	
-	
-	lastCursorPosition = _get_screen_mouse_position()
+		get_window().position = DisplayServer.mouse_get_position() + cursorOffset
 
 func _on_button_down():
-	lastCursorPosition = _get_screen_mouse_position()
+	cursorOffset = _set_mouse_offset()
 	isDragging = true
-
 
 func _on_button_up():
 	isDragging = false
 
-func _get_screen_mouse_position():
-	
-	var viewportCursorPosition : Vector2i = get_viewport().get_mouse_position()
-	var windowPosition : Vector2i = get_window().position
-	var screenMousePosition = viewportCursorPosition + windowPosition
-	
-	return screenMousePosition
+func _set_mouse_offset() -> Vector2i:
+	var _correctedWindowPosition : Vector2i = DisplayServer.window_get_position() - Vector2i(3,3)
+	var _mouseOffset = _correctedWindowPosition - DisplayServer.mouse_get_position()
+	return _mouseOffset

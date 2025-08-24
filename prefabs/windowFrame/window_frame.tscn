@@ -24,6 +24,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_default_cursor_shape = 6
 theme_override_styles/focus = SubResource("StyleBoxEmpty_qek4g")
+action_mode = 0
 flat = true
 script = ExtResource("2_gxhl3")
 
