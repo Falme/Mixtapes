@@ -1,15 +1,16 @@
-class_name TapeConfiguration
-extends Control
+class_name TapeConfiguration extends Control
 
 var this : Control = self
 
 const gamesFolder : String = "Games"
 const infoFolder : String = "mixtape_info.txt"
+const infoFile : String = "mixtape_info.json"
 
 const splitCharacter : String = ":"
 const authorIcon: String = "👥 "
 
 var gamePath : String
+var infoData = {}
 
 @export var gameNumber : String
 
@@ -18,17 +19,14 @@ func _ready():
 	_load_info()
 
 func _load_info():
-	var filePath: String = gamePath.path_join(infoFolder)
-	var file = FileAccess.open(filePath, FileAccess.READ)
-	var content = file.get_as_text()
+	var filePath: String = gamePath.path_join(infoFile)
+	infoData = load_json_file(filePath)
 
-	var infoArray = content.split("\r\n")
-
-	var gameTitle = infoArray[0].split(splitCharacter)[1]
-	var gameAuthor = infoArray[1].split(splitCharacter)[1]
-	var gameBanner = infoArray[2].split(splitCharacter)[1]
-	var gameExecutable = infoArray[3].split(splitCharacter)[1]
-
+	var gameTitle = infoData["title"]
+	var gameAuthor = infoData["author"]
+	var gameBanner = infoData["art"]
+	var gameExecutable = infoData["file"]
+	
 	_load_label(gameTitle, gameAuthor)
 	_load_banner(gameBanner)
 	_load_executable(gameExecutable)
@@ -48,3 +46,16 @@ func _load_banner(_bannerName):
 func _load_executable(_executableName):
 	$ToGame.executableName = _executableName
 	$ToGame.gameNumber = gameNumber
+
+func load_json_file(filePath : String):
+	if FileAccess.file_exists(filePath):
+		var dataFile = FileAccess.open(filePath, FileAccess.READ)
+		var parsedResult = JSON.parse_string(dataFile.get_as_text())
+		
+		if parsedResult is Dictionary:
+			return parsedResult
+		else:
+			print("Error reading File")
+			
+	else:
+		print("File Doesnt Exist")

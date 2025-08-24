@@ -1,5 +1,4 @@
-class_name CallExternalGame
-extends Button
+class_name CallExternalGame extends Button
 
 var executableName : String
 var gameNumber : String
